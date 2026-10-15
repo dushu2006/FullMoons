@@ -296,9 +296,9 @@ export default function HomePage() {
         <div className="site-container mt-10 border-t border-[var(--color-border-dark)] pt-6 text-xs text-[var(--color-muted)]">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p>© {new Date().getFullYear()} FULL MOONs Family Restaurant. All rights reserved.</p>
-            <a href="/privacy" aria-label="Privacy notice" className="hover:text-[var(--color-text-light-secondary)]">
+            <Link href="/privacy" aria-label="Privacy notice" className="hover:text-[var(--color-text-light-secondary)]">
               Privacy Notice
-            </a>
+            </Link>
           </div>
         </div>
       </footer>
