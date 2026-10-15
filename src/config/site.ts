@@ -31,8 +31,12 @@ export const siteConfig = {
   ],
   links: {
     primaryCta: "#menu",
+    // Official Maps directions URL: opens the directions screen (or the
+    // Maps app) with the restaurant pre-filled as the destination, so one
+    // tap actually starts navigation. The previous search URL only opened
+    // a search results page and could miss the restaurant entirely.
     directions:
-      "https://www.google.com/maps/search/?api=1&query=FULL+MOONs+Family+Restaurant+Main+Road+New+Gajuwaka+Gajuwaka+Visakhapatnam",
+      "https://www.google.com/maps/dir/?api=1&destination=FULL%20MOONs%20Family%20Restaurant%2C%20Door%2010-9-30%2C%20Main%20Road%2C%20New%20Gajuwaka%2C%20Gajuwaka%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530026%2C%20India",
     districtListing:
       "https://www.district.in/dining/visakhapatnam/full-moons-family-restaurant-gajuwaka-vizag",
     zomatoListing: null as string | null,

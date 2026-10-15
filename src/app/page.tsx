@@ -224,7 +224,7 @@ export default function HomePage() {
               <div className="h-[320px] w-full overflow-hidden md:h-[420px]">
                 <iframe
                   title="Map to FULL MOONs Family Restaurant"
-                  src="https://www.google.com/maps?q=FULL+MOONs+Family+Restaurant+Main+Road+New+Gajuwaka+Gajuwaka+Visakhapatnam&output=embed"
+                  src="https://www.google.com/maps?q=FULL%20MOONs%20Family%20Restaurant%2C%20Door%2010-9-30%2C%20Main%20Road%2C%20New%20Gajuwaka%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530026%2C%20India&output=embed"
                   className="h-full w-full border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
