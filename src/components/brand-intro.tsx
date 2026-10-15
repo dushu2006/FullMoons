@@ -168,11 +168,7 @@ function interpolateRect(start: Rect, end: Rect, progress: number): Rect {
 }
 
 function hasCompletedIntro() {
-  try {
-    return window.sessionStorage.getItem(COMPLETED_KEY) === "1";
-  } catch {
-    return false;
-  }
+  return false;
 }
 
 function rememberCompletion() {
@@ -201,7 +197,7 @@ export function BrandIntro() {
     const overlay = overlayRef.current;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-    if (hasCompletedIntro() || reducedMotion.matches) {
+    if (reducedMotion.matches) {
       rememberCompletion();
       if (overlay) overlay.style.display = "none";
       return;
@@ -262,9 +258,7 @@ export function BrandIntro() {
       setVisible(false);
 
       if (document.activeElement === skipButton) {
-        document
-          .querySelector<HTMLElement>("[data-brand-logo-link]")
-          ?.focus({ preventScroll: true });
+        skipButton.blur();
       }
     };
 

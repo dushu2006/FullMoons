@@ -153,7 +153,7 @@ test("homepage remains available when client scripting is disabled", async ({
   });
   try {
     const page = await context.newPage();
-    await page.goto("/");
+    await page.goto("/", { waitUntil: "domcontentloaded" });
     await expect(page.locator(".brand-intro")).toBeHidden();
     await expect(
       page.getByRole("heading", { name: "Discover Your Next Favourite Dish." }),

@@ -73,7 +73,7 @@ export function SiteHeader() {
         <Link
           href="#home"
           data-brand-logo-link
-          className="flex shrink-0 items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-bg-primary)]"
+          className="flex shrink-0 items-center rounded-sm focus:outline-none focus-visible:outline-none"
           onClick={() => setMenuOpen(false)}
         >
           <Image
