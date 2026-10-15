@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { siteConfig } from "@/config/site";
@@ -68,17 +69,32 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--color-border-dark)] bg-[var(--color-bg-primary)]/95 backdrop-blur">
-      <div className="mx-auto flex h-[76px] w-full max-w-[1280px] items-center justify-between px-5 sm:px-6 md:px-8 lg:px-12">
+      <div className="site-container flex h-[72px] items-center justify-between gap-3 md:h-[84px] lg:h-[92px] xl:h-[96px]">
         <Link
           href="#home"
-          className="font-heading text-2xl font-semibold tracking-wide text-[var(--color-text-light-primary)]"
-          aria-label="Go to home"
+          data-brand-logo-link
+          className="flex shrink-0 items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-bg-primary)]"
           onClick={() => setMenuOpen(false)}
         >
-          FULL MOONs
+          <Image
+            src="/images/full-moons-logo.png"
+            alt="FULL MOONs Family Restaurant"
+            width={1200}
+            height={355}
+            sizes="228px"
+            priority
+            fetchPriority="high"
+            unoptimized
+            draggable={false}
+            className="aspect-[1200/355] h-auto w-[clamp(196px,58vw,228px)] md:w-[clamp(206px,22vw,236px)] xl:w-[248px]"
+            data-brand-logo
+          />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav
+          className="hidden min-w-0 flex-1 items-center justify-center gap-[clamp(12px,1.5vw,24px)] md:flex"
+          aria-label="Primary"
+        >
           {navItems.map((item) => {
             const targetId = item.href.replace("#", "");
             const isActive = activeId === targetId;
@@ -88,7 +104,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "true" : undefined}
-                className={`text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg-primary)] ${
+                className={`whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg-primary)] ${
                   isActive
                     ? "text-[var(--color-accent)]"
                     : "text-[var(--color-text-light-secondary)] hover:text-[var(--color-text-light-primary)]"
@@ -100,8 +116,11 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden md:block">
-          <Link href={siteConfig.links.primaryCta} className="btn btn-primary">
+        <div className="hidden shrink-0 md:block">
+          <Link
+            href={siteConfig.links.primaryCta}
+            className="btn btn-primary whitespace-nowrap"
+          >
             Explore Menu
           </Link>
         </div>
@@ -113,16 +132,19 @@ export function SiteHeader() {
           aria-controls="mobile-nav"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="inline-flex h-11 w-11 items-center justify-center border border-[var(--color-border-dark)] text-[var(--color-text-light-primary)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] md:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] text-[var(--color-text-light-primary)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg-primary)] md:hidden"
         >
-          <span className="sr-only">Toggle navigation</span>
-          {/* Three-bar icon built from spans so it always renders crisply
-              (the old ☰ text glyph depended on fallback fonts). */}
-          <span aria-hidden="true" className="flex w-5 flex-col items-stretch gap-[5px]">
+          {/* Three bars and their animated close state render consistently in every browser. */}
+          <span
+            aria-hidden="true"
+            className="flex w-5 flex-col items-stretch gap-[5px]"
+          >
             <span
               className={`block h-[2px] bg-current transition-transform duration-200 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
             />
-            <span className={`block h-[2px] bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+            <span
+              className={`block h-[2px] bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
+            />
             <span
               className={`block h-[2px] bg-current transition-transform duration-200 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
             />
@@ -130,7 +152,10 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div id="mobile-nav" className={`md:hidden ${menuOpen ? "block" : "hidden"}`}>
+      <div
+        id="mobile-nav"
+        className={`md:hidden ${menuOpen ? "block" : "hidden"}`}
+      >
         <div className="border-t border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] px-5 pb-6 pt-4 sm:px-6">
           <nav className="flex flex-col gap-3" aria-label="Mobile Primary">
             {navItems.map((item) => {
@@ -140,8 +165,10 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   aria-current={isActive ? "true" : undefined}
-                  className={`rounded-sm px-1 py-2 text-base transition hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] ${
-                    isActive ? "text-[var(--color-accent)]" : "text-[var(--color-text-light-primary)]"
+                  className={`rounded-sm px-1 py-2 text-base transition-colors hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] ${
+                    isActive
+                      ? "text-[var(--color-accent)]"
+                      : "text-[var(--color-text-light-primary)]"
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
@@ -149,7 +176,11 @@ export function SiteHeader() {
                 </Link>
               );
             })}
-            <Link href={siteConfig.links.primaryCta} className="btn btn-primary mt-2 w-full" onClick={() => setMenuOpen(false)}>
+            <Link
+              href={siteConfig.links.primaryCta}
+              className="btn btn-primary mt-2 w-full"
+              onClick={() => setMenuOpen(false)}
+            >
               Explore Menu
             </Link>
           </nav>

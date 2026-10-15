@@ -10,6 +10,7 @@ import { GalleryLightbox } from "@/components/gallery-lightbox";
 import { MenuExplorer } from "@/components/menu-explorer";
 import { VisitPlanner } from "@/components/visit-planner";
 import { SectionHeading } from "@/components/section-heading";
+import { BrandIntro } from "@/components/brand-intro";
 import { SiteHeader } from "@/components/site-header";
 
 const structuredData = {
@@ -32,6 +33,8 @@ const structuredData = {
 export default function HomePage() {
   return (
     <>
+      <BrandIntro />
+
       <a
         href="#home-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:bg-[var(--color-bg-cream)] focus:px-4 focus:py-2 focus:text-[var(--color-text-dark-primary)]"
