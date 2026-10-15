@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { buildWhatsAppHref, siteConfig } from "@/config/site";
 
@@ -11,6 +12,7 @@ type MenuItem = {
 
 type MenuCategory = {
   category: string;
+  image: string;
   notes: string;
   items: readonly MenuItem[];
 };
@@ -93,52 +95,58 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
   return (
     <div>
       {/* Controls */}
-      <div className="mb-6 flex flex-col gap-4">
+      <div className="mb-8 border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)]/80 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] sm:p-5">
         <div className="flex flex-wrap items-end gap-3">
           <div className="min-w-[220px] flex-1">
-            <label htmlFor="menu-search" className="eyebrow text-[var(--color-text-dark-secondary)]">
+            <label htmlFor="menu-search" className="eyebrow text-[var(--color-accent)]">
               Search menu highlights
             </label>
-            <input
-              id="menu-search"
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Try “biryani”, “paneer”, “noodles”…"
-              className="mt-2 w-full border border-[var(--color-border-light)] bg-white/70 px-4 py-3 text-[var(--color-text-dark-primary)] placeholder:text-[var(--color-text-dark-secondary)] focus:border-[var(--color-accent-deep)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
-            />
+            <div className="relative mt-2">
+              <span aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-muted)]">
+                🔍
+              </span>
+              <input
+                id="menu-search"
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Try “biryani”, “paneer”, “noodles”…"
+                className="w-full border border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] py-3 pl-10 pr-4 text-[var(--color-text-light-primary)] placeholder:text-[var(--color-muted)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+              />
+            </div>
           </div>
-          <label className="inline-flex cursor-pointer items-center gap-2 border border-[var(--color-border-light)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-dark-primary)]">
+          <label className="inline-flex cursor-pointer items-center gap-2 border border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] px-4 py-3 text-sm font-semibold text-[var(--color-text-light-primary)] transition hover:border-[var(--color-accent)]">
             <input
               type="checkbox"
               checked={vegOnly}
               onChange={(e) => setVegOnly(e.target.checked)}
               className="h-4 w-4 accent-[#397653]"
             />
+            <span aria-hidden="true" className="inline-block h-2.5 w-2.5 rounded-[2px] border-2 border-[#4caf7d]" />
             Veg only
           </label>
           {hasFilters ? (
             <button
               type="button"
               onClick={clearFilters}
-              className="btn btn-dark-outline !min-h-[46px]"
+              className="btn btn-secondary !min-h-[46px]"
             >
               Clear filters
             </button>
           ) : null}
         </div>
 
-        <div className="flex flex-wrap gap-2" role="group" aria-label="Filter menu by category">
+        <div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filter menu by category">
           {["All", ...categories.map((c) => c.category)].map((category) => (
             <button
               key={category}
               type="button"
               aria-pressed={selected === category}
               onClick={() => selectCategory(category)}
-              className={`border px-4 py-2 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent-deep)] ${
+              className={`rounded-full border px-4 py-2 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] ${
                 selected === category
-                  ? "border-[var(--color-text-dark-primary)] bg-[var(--color-text-dark-primary)] text-[var(--color-bg-cream)]"
-                  : "border-[var(--color-border-light)] bg-white/50 text-[var(--color-text-dark-primary)] hover:border-[var(--color-accent-deep)]"
+                  ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-[var(--color-bg-primary)] shadow-[0_6px_20px_rgba(215,180,119,0.35)]"
+                  : "border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] text-[var(--color-text-light-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-text-light-primary)]"
               }`}
             >
               {category}
@@ -146,8 +154,9 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
           ))}
         </div>
 
-        <p aria-live="polite" className="text-sm text-[var(--color-text-dark-secondary)]">
-          {resultCount} highlight{resultCount === 1 ? "" : "s"} found
+        <p aria-live="polite" className="mt-4 text-sm text-[var(--color-text-light-secondary)]">
+          <span className="font-heading text-xl font-semibold text-[var(--color-accent)]">{resultCount}</span>{" "}
+          highlight{resultCount === 1 ? "" : "s"} found
           {selected !== "All" ? ` in ${selected}` : ""}. Prices and today&apos;s availability are
           confirmed on call or WhatsApp — no prices are published online.
         </p>
@@ -163,18 +172,40 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
               type="button"
               aria-pressed={isActive}
               onClick={() => selectCategory(isActive ? "All" : item.category)}
-              className={`border p-5 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent-deep)] ${
+              className={`group overflow-hidden border text-left shadow-[0_12px_36px_rgba(0,0,0,0.3)] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] ${
                 isActive
-                  ? "border-[var(--color-accent-deep)] bg-[var(--color-accent)]/15 ring-1 ring-[var(--color-accent-deep)]"
-                  : "border-[var(--color-border-light)] bg-white/50 hover:border-[var(--color-accent-deep)]"
+                  ? "border-[var(--color-accent)] ring-2 ring-[var(--color-accent)]"
+                  : "border-[var(--color-border-dark)] hover:-translate-y-1 hover:border-[var(--color-accent)]/70"
               }`}
             >
-              <h3 className="font-heading text-[clamp(1.35rem,1.8vw,1.6rem)] font-semibold text-[var(--color-text-dark-primary)]">
-                {item.category}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-dark-secondary)]">{item.notes}</p>
-              <span className="mt-3 inline-block text-xs font-bold uppercase tracking-wide text-[var(--color-accent-deep)]">
-                {isActive ? "Showing below ✓ — tap to show all" : `${item.items.length} highlights — tap to view`}
+              <span className="relative block h-28 overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt=""
+                  width={600}
+                  height={300}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <span className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+                <span className="absolute bottom-2 right-2 bg-black/65 px-2 py-1 text-[11px] font-bold uppercase tracking-wide text-[var(--color-accent)]">
+                  {item.items.length} highlights
+                </span>
+                {isActive ? (
+                  <span className="absolute left-2 top-2 bg-[var(--color-accent)] px-2 py-1 text-[11px] font-bold uppercase tracking-wide text-[var(--color-bg-primary)]">
+                    ✓ Showing
+                  </span>
+                ) : null}
+              </span>
+              <span className="block bg-[var(--color-bg-secondary)] p-4">
+                <span className="font-heading text-[clamp(1.35rem,1.8vw,1.55rem)] font-semibold leading-tight text-[var(--color-text-light-primary)]">
+                  {item.category}
+                </span>
+                <span className="mt-1.5 block text-sm leading-relaxed text-[var(--color-text-light-secondary)]">{item.notes}</span>
+                <span className="mt-3 block text-xs font-bold uppercase tracking-wide text-[var(--color-accent)]">
+                  {isActive ? "Tap to show all →" : "Tap to view →"}
+                </span>
               </span>
             </button>
           );
@@ -183,55 +214,65 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
 
       {/* Results */}
       {visibleCategories.length === 0 ? (
-        <div className="mt-8 border border-[var(--color-border-light)] bg-white/60 p-6 text-center">
-          <p className="font-heading text-2xl font-semibold text-[var(--color-text-dark-primary)]">
+        <div className="mt-10 border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-8 text-center">
+          <p className="text-3xl" aria-hidden="true">🍽️</p>
+          <p className="mt-2 font-heading text-2xl font-semibold text-[var(--color-text-light-primary)]">
             No highlights match your search
           </p>
-          <p className="mx-auto mt-2 max-w-[52ch] text-sm text-[var(--color-text-dark-secondary)]">
+          <p className="mx-auto mt-2 max-w-[52ch] text-sm text-[var(--color-text-light-secondary)]">
             Try a different word, or ask the restaurant directly — the full menu is available on call
             and WhatsApp.
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-3">
-            <button type="button" onClick={clearFilters} className="btn btn-dark-outline">
+            <button type="button" onClick={clearFilters} className="btn btn-primary">
               Clear search &amp; filters
             </button>
-            <a
-              href={siteConfig.business.contact.phoneHref}
-              className="btn btn-dark-outline"
-            >
+            <a href={siteConfig.business.contact.phoneHref} className="btn btn-secondary">
               Call {siteConfig.business.contact.phoneDisplay}
             </a>
           </div>
         </div>
       ) : (
-        <div className="mt-8 space-y-8">
+        <div className="mt-10 space-y-10">
           {visibleCategories.map((category) => (
             <div key={category.category}>
-              <h3 className="font-heading text-2xl font-semibold text-[var(--color-text-dark-primary)]">
-                {category.category}
-                <span className="ml-3 align-middle text-sm font-normal text-[var(--color-text-dark-secondary)]">
-                  {category.notes}
-                </span>
-              </h3>
-              <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div className="relative h-36 overflow-hidden border border-[var(--color-border-dark)] sm:h-44">
+                <Image
+                  src={category.image}
+                  alt={`Illustrative image for ${category.category}`}
+                  fill
+                  className="object-cover"
+                  loading="lazy"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/10" />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <p className="eyebrow text-[var(--color-accent)]">{category.items.length} highlights</p>
+                  <h3 className="mt-1 font-heading text-3xl font-semibold text-white sm:text-4xl">
+                    {category.category}
+                  </h3>
+                  <p className="text-sm text-white/80">{category.notes}</p>
+                </div>
+              </div>
+              <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {category.items.map((item) => (
                   <li
                     key={`${category.category}-${item.name}`}
-                    className="border border-[var(--color-border-light)] bg-white/60 p-4"
+                    className="group border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
                   >
                     <div className="flex items-start justify-between gap-3">
-                      <p className="font-semibold text-[var(--color-text-dark-primary)]">{item.name}</p>
+                      <p className="font-heading text-xl font-semibold leading-snug text-[var(--color-text-light-primary)]">{item.name}</p>
                       <span
-                        className={`shrink-0 border px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
+                        className={`mt-0.5 shrink-0 rounded-full border px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
                           item.diet === "veg"
-                            ? "border-[#397653] text-[#397653]"
-                            : "border-[#b43d35] text-[#b43d35]"
+                            ? "border-[#4caf7d]/60 bg-[#397653]/20 text-[#8fd0a8]"
+                            : "border-[#e0655c]/50 bg-[#b43d35]/15 text-[#f0a49e]"
                         }`}
                       >
                         {dietLabel[item.diet] ?? item.diet}
                       </span>
                     </div>
-                    <p className="mt-1 text-sm leading-relaxed text-[var(--color-text-dark-secondary)]">
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">
                       {item.description}
                     </p>
                     <a
@@ -240,7 +281,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
                       )}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-flex text-sm font-semibold text-[var(--color-accent-deep)] hover:underline"
+                      className="mt-4 inline-flex text-sm font-semibold text-[var(--color-accent)] transition group-hover:gap-2 hover:text-[var(--color-accent-deep)] hover:underline"
                       aria-label={`Enquire about ${item.name} on WhatsApp`}
                     >
                       Enquire on WhatsApp →

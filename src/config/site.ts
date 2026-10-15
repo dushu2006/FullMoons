@@ -102,6 +102,7 @@ export const siteConfig = {
   menuOverview: [
     {
       category: "Veg",
+      image: "/images/featured-veg.jpg",
       notes: "Vegetarian mains, sides and curries",
       items: [
         { name: "Paneer Butter Masala", description: "Cottage cheese simmered in a rich tomato-butter gravy.", diet: "veg" },
@@ -112,6 +113,7 @@ export const siteConfig = {
     },
     {
       category: "Biryani",
+      image: "/images/hero-biryani.jpg",
       notes: "Veg and non-veg biryani varieties",
       items: [
         { name: "Chicken Dum Biryani", description: "Fragrant layered rice cooked dum-style with chicken.", diet: "non-veg" },
@@ -122,6 +124,7 @@ export const siteConfig = {
     },
     {
       category: "Chicken",
+      image: "/images/gallery-curry.jpg",
       notes: "Starters, curries and rice accompaniments",
       items: [
         { name: "Chicken Curry", description: "Homestyle chicken gravy, best paired with rice or breads.", diet: "non-veg" },
@@ -131,6 +134,7 @@ export const siteConfig = {
     },
     {
       category: "Mutton",
+      image: "/images/intro-platter.jpg",
       notes: "Traditional mutton gravies and dry items",
       items: [
         { name: "Mutton Curry", description: "Traditional slow-cooked mutton gravy.", diet: "non-veg" },
@@ -140,6 +144,7 @@ export const siteConfig = {
     },
     {
       category: "Seafood",
+      image: "/images/featured-seafood.jpg",
       notes: "Fish and prawn-based preparations",
       items: [
         { name: "Fish Curry", description: "Regional-style fish curry with bold spices.", diet: "non-veg" },
@@ -149,6 +154,7 @@ export const siteConfig = {
     },
     {
       category: "Starters",
+      image: "/images/featured-starters.jpg",
       notes: "Vegetarian and non-vegetarian starters",
       items: [
         { name: "Chicken 65", description: "Fiery deep-fried chicken starter with curry leaves.", diet: "non-veg" },
@@ -159,6 +165,7 @@ export const siteConfig = {
     },
     {
       category: "Rice and Noodles",
+      image: "/images/featured-noodles.jpg",
       notes: "Rice items, noodles and quick bowls",
       items: [
         { name: "Veg Fried Rice", description: "Smoky wok-tossed rice with vegetables.", diet: "veg" },
@@ -169,6 +176,7 @@ export const siteConfig = {
     },
     {
       category: "Curries and Breads",
+      image: "/images/gallery-bread.jpg",
       notes: "Indian breads, curry bases and accompaniments",
       items: [
         { name: "Butter Naan", description: "Soft tandoor naan brushed with butter.", diet: "veg" },

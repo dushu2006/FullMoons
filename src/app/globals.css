@@ -186,3 +186,13 @@ input[type="time"] {
 #menu-search {
   color-scheme: light;
 }
+
+/* Menu section backdrop: deep charcoal with a warm gold/spice glow and a
+   faint diagonal texture, so the section matches the rest of the site
+   instead of reading as a plain white block. */
+.menu-bg {
+  background-image:
+    radial-gradient(ellipse 60% 45% at 85% 0%, rgba(215, 180, 119, 0.13), transparent 65%),
+    radial-gradient(ellipse 55% 40% at 8% 100%, rgba(123, 48, 40, 0.28), transparent 65%),
+    repeating-linear-gradient(135deg, rgba(244, 239, 229, 0.025) 0 1px, transparent 1px 14px);
+}

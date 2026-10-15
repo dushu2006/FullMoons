@@ -110,12 +110,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="menu" className="section-space bg-[var(--color-bg-cream)] text-[var(--color-text-dark-primary)]">
-          <div className="site-container">
+        <section id="menu" className="menu-bg section-space relative overflow-hidden bg-[var(--color-bg-primary)] text-[var(--color-text-light-primary)]">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-[var(--color-accent)]/10 blur-3xl" />
+          <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-[var(--color-spice)]/20 blur-3xl" />
+          <div className="site-container relative">
             <SectionHeading
               eyebrow="Menu"
               title="Menu Overview"
-              theme="dark"
               description={
                 <>
                   <p>
@@ -123,7 +124,7 @@ export default function HomePage() {
                     view the current listing.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <a href={siteConfig.links.districtListing} target="_blank" rel="noopener noreferrer" className="btn btn-dark-outline">
+                    <a href={siteConfig.links.districtListing} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                       View Listed Menu
                     </a>
                   </div>
@@ -135,7 +136,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="gallery" className="section-space bg-[var(--color-bg-cream)] text-[var(--color-text-dark-primary)] pt-0">
+        <section id="gallery" className="section-space bg-[var(--color-bg-cream)] text-[var(--color-text-dark-primary)]">
           <div className="site-container">
             <SectionHeading
               eyebrow="Gallery"
