@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
   ...(staticExport
     ? {
         output: "export" as const,
-        basePath: "/FullMoons",
+        basePath: process.env.NEXT_PUBLIC_BASE_PATH || "/FullMoons",
         trailingSlash: true,
         images: { loader: "custom" as const, loaderFile: "./image-loader.ts" },
       }

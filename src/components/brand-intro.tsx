@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import { brandArtwork } from "@/components/brand-artwork";
 
 const COMPLETED_KEY = "fullmoons:brand-intro:complete:v1";
-const LOGO_SRC = "/images/full-moons-logo.png";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const LOGO_SRC = `${basePath}/images/full-moons-logo.png`;
 
 const TIMING = {
   pointIn: 220,

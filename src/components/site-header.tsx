@@ -84,7 +84,6 @@ export function SiteHeader() {
             sizes="228px"
             priority
             fetchPriority="high"
-            unoptimized
             draggable={false}
             className="aspect-[1200/355] h-auto w-[clamp(196px,58vw,228px)] md:w-[clamp(206px,22vw,236px)] xl:w-[248px]"
             data-brand-logo

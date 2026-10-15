@@ -43,6 +43,7 @@ jobs:
         run: npm run build
         env:
           STATIC_EXPORT: "1"
+          NEXT_PUBLIC_BASE_PATH: /FullMoons
           NEXT_PUBLIC_SITE_URL: https://dushu2006.github.io/FullMoons
 
       - uses: actions/configure-pages@v5
