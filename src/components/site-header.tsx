@@ -116,7 +116,17 @@ export function SiteHeader() {
           className="inline-flex h-11 w-11 items-center justify-center border border-[var(--color-border-dark)] text-[var(--color-text-light-primary)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] md:hidden"
         >
           <span className="sr-only">Toggle navigation</span>
-          {menuOpen ? "✕" : "☰"}
+          {/* Three-bar icon built from spans so it always renders crisply
+              (the old ☰ text glyph depended on fallback fonts). */}
+          <span aria-hidden="true" className="flex w-5 flex-col items-stretch gap-[5px]">
+            <span
+              className={`block h-[2px] bg-current transition-transform duration-200 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
+            />
+            <span className={`block h-[2px] bg-current transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+            <span
+              className={`block h-[2px] bg-current transition-transform duration-200 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+            />
+          </span>
         </button>
       </div>
 
