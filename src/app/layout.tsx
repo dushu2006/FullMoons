@@ -48,6 +48,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-[var(--color-bg-primary)] font-body text-[var(--color-text-light-primary)] antialiased">
+        <noscript>
+          <style>{".brand-intro { display: none !important; }"}</style>
+        </noscript>
         {children}
       </body>
     </html>

@@ -196,3 +196,94 @@ input[type="time"] {
     radial-gradient(ellipse 55% 40% at 8% 100%, rgba(123, 48, 40, 0.28), transparent 65%),
     repeating-linear-gradient(135deg, rgba(244, 239, 229, 0.025) 0 1px, transparent 1px 14px);
 }
+
+/* The introduction is an overlay rather than a new page, so the homepage
+   keeps its original layout and is simply revealed behind the logo. */
+.brand-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--color-bg-primary);
+  color: var(--color-text-light-primary);
+  pointer-events: auto;
+}
+
+body.brand-intro-running [data-brand-logo] {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.brand-intro-skip {
+  position: fixed;
+  z-index: 3;
+  top: calc(env(safe-area-inset-top, 0px) + 16px);
+  right: calc(env(safe-area-inset-right, 0px) + 16px);
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid rgba(215, 180, 119, 0.72);
+  border-radius: 999px;
+  background: rgba(36, 34, 30, 0.96);
+  color: var(--color-text-light-primary);
+  font: 600 0.8rem/1 var(--font-body);
+  letter-spacing: 0.035em;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    opacity 80ms linear;
+}
+
+.brand-intro-skip:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.brand-intro-skip:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.brand-intro-artwork {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: min(clamp(246px, 55vw, 390px), calc(100vw - 40px));
+  height: auto;
+  overflow: visible;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  will-change: left, top, width, height, opacity;
+}
+
+.brand-intro-full-logo {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: min(88vw, 980px);
+  max-width: calc(100vw - 32px);
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  clip-path: circle(0% at 71.833% 18.873%);
+  pointer-events: none;
+  will-change: left, top, width, height, clip-path, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-intro {
+    display: none;
+  }
+
+  body.brand-intro-running [data-brand-logo] {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
