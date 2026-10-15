@@ -126,16 +126,43 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
               />
             </div>
           </div>
-          <label className="inline-flex cursor-pointer items-center gap-2 border border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] px-4 py-3 text-sm font-semibold text-[var(--color-text-light-primary)] transition hover:border-[var(--color-accent)]">
-            <input
-              type="checkbox"
-              checked={vegOnly}
-              onChange={(e) => setVegOnly(e.target.checked)}
-              className="h-4 w-4 accent-[#397653]"
-            />
-            <span aria-hidden="true" className="inline-block h-2.5 w-2.5 rounded-[2px] border-2 border-[#4caf7d]" />
+          <button
+            type="button"
+            role="switch"
+            aria-checked={vegOnly}
+            aria-label="Veg only"
+            onClick={() => setVegOnly((v) => !v)}
+            className={`inline-flex items-center gap-3 rounded-full border py-2.5 pl-4 pr-3 text-sm font-semibold shadow-sm transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4caf7d] ${
+              vegOnly
+                ? "border-[#4caf7d] bg-[#397653]/30 text-white shadow-[0_8px_24px_rgba(57,118,83,0.35)]"
+                : "border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] text-[var(--color-text-light-secondary)] hover:border-[#4caf7d]/70 hover:text-[var(--color-text-light-primary)]"
+            }`}
+          >
+            {/* Indian veg mark */}
+            <span
+              aria-hidden="true"
+              className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[4px] border-2 border-[#4caf7d] bg-[var(--color-bg-primary)]"
+            >
+              <span className="h-2 w-2 rounded-full bg-[#4caf7d]" />
+            </span>
             Veg only
-          </label>
+            {/* Sliding switch */}
+            <span
+              aria-hidden="true"
+              className={`relative h-6 w-11 shrink-0 rounded-full transition-colors duration-300 ${
+                vegOnly ? "bg-[#2f9e63]" : "bg-white/15"
+              }`}
+            >
+              <span
+                className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform duration-300 ${
+                  vegOnly ? "translate-x-5" : "translate-x-0"
+                }`}
+              />
+            </span>
+            <span aria-hidden="true" className={`text-xs font-bold uppercase tracking-wide ${vegOnly ? "text-[#8fd0a8]" : "text-[var(--color-muted)]"}`}>
+              {vegOnly ? "On" : "Off"}
+            </span>
+          </button>
           {hasFilters ? (
             <button
               type="button"

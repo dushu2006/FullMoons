@@ -72,13 +72,16 @@ test("menu explorer searches, filters and links to WhatsApp", async ({ page }) =
 
   // Clearing restores the full list; the Veg-only toggle hides non-veg items.
   await page.getByRole("button", { name: /clear filters/i }).first().click();
-  await page.getByLabel(/veg only/i).check();
+  const vegSwitch = page.getByRole("switch", { name: /veg only/i });
+  await vegSwitch.click();
+  await expect(vegSwitch).toHaveAttribute("aria-checked", "true");
   await expect(page.getByText("Chicken Dum Biryani")).toBeHidden();
   await expect(page.getByText("Veg Biryani")).toBeVisible();
 
   // Category pills filter to a single category and auto-scroll the
   // highlights into view.
-  await page.getByLabel(/veg only/i).uncheck();
+  await vegSwitch.click();
+  await expect(vegSwitch).toHaveAttribute("aria-checked", "false");
   await page.getByRole("button", { name: "Seafood", exact: true }).first().click();
   await expect(page.getByText("Fish Curry")).toBeVisible();
   await expect(page.getByText("Veg Biryani")).toBeHidden();
