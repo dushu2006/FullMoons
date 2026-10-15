@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { siteConfig } from "@/config/site";
 
 export function FloatingActions() {
   const [showTop, setShowTop] = useState(false);
@@ -25,15 +24,6 @@ export function FloatingActions() {
           ↑
         </button>
       ) : null}
-      <a
-        href={siteConfig.business.contact.whatsappHref}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with FULL MOONs on WhatsApp"
-        className="inline-flex items-center gap-2 rounded-full bg-[#397653] px-5 py-3 text-sm font-bold text-white shadow-lg transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-      >
-        <span aria-hidden="true">💬</span> WhatsApp us
-      </a>
     </div>
   );
 }

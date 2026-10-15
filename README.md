@@ -52,8 +52,8 @@ Notes:
 - **Plan your visit** — a short helper in the Visit section that validates
   the date/guests and opens WhatsApp with the enquiry pre-filled. Nothing
   is stored on the website.
-- **Quick actions** — copy-address button, floating WhatsApp button and a
-  back-to-top button; the mobile menu closes on Escape or on resize to
+- **Quick actions** — copy-address button and a
+  back-to-top button (appears after scrolling); the mobile menu closes on Escape or on resize to
   desktop.
 
 ## Automated browser tests
