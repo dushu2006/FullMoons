@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-primary: #171715;
+  --color-bg-secondary: #24221e;
+  --color-accent: #d7b477;
+  --color-accent-deep: #b88b4a;
+  --color-bg-cream: #f4efe5;
+  --color-spice: #7b3028;
+
+  --color-text-dark-primary: #29241e;
+  --color-text-dark-secondary: #62594e;
+  --color-text-light-primary: #f4efe5;
+  --color-text-light-secondary: #d0c6b6;
+  --color-muted: #b8b1a5;
+
+  --color-border-dark: #403c34;
+  --color-border-light: #dcd3c5;
+  --color-success: #397653;
+  --color-error: #b43d35;
+
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Manrope", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.site-container {
+  margin-inline: auto;
+  width: min(100%, 1280px);
+  padding-inline: clamp(20px, 4vw, 64px);
+}
+
+.section-space {
+  padding-block: clamp(56px, 8vw, 118px);
+}
+
+[id] {
+  scroll-margin-top: 96px;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 7vw, 4.65rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.08;
+  font-weight: 600;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 26px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg-primary), 0 0 0 4px var(--color-accent);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-deep);
+}
+
+.btn-secondary {
+  border-color: var(--color-accent);
+  color: var(--color-text-light-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent-deep);
+  color: var(--color-accent);
+}
+
+.btn-dark-outline {
+  border-color: var(--color-text-dark-primary);
+  color: var(--color-text-dark-primary);
+}
+
+.btn-dark-outline:hover {
+  border-color: var(--color-accent-deep);
+  color: var(--color-accent-deep);
+}
+
+.action-card {
+  border: 1px solid var(--color-border-dark);
+  background: var(--color-bg-primary);
+  color: var(--color-text-light-primary);
+  padding: 22px;
+  display: block;
+  min-height: 148px;
+  text-decoration: none;
+  transition: border-color 0.22s ease, transform 0.22s ease;
+}
+
+.action-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.action-card h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 3vw, 1.8rem);
+  font-weight: 600;
+}
+
+.action-card p {
+  margin-top: 8px;
+  color: var(--color-text-light-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Dark form controls (visit planner): keep native pickers legible */
+select option {
+  color: var(--color-text-dark-primary);
+  background: #fff;
+}
+
+input[type="date"],
+input[type="time"] {
+  color-scheme: dark;
+}
+
+/* Menu search keeps a light field, so keep its picker legible too */
+#menu-search {
+  color-scheme: light;
+}
