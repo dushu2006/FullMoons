@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { ActionLink } from "@/components/action-link";
 import { CopyAddressButton } from "@/components/copy-address-button";
 import { DirectionsLink } from "@/components/directions-link";
 import { FeaturedGrid } from "@/components/featured-grid";
@@ -123,9 +124,9 @@ export default function HomePage() {
                     view the current listing.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <a href={siteConfig.links.districtListing} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                    <ActionLink href={siteConfig.links.districtListing} className="btn btn-primary">
                       View Listed Menu
-                    </a>
+                    </ActionLink>
                   </div>
                 </>
               }
@@ -156,31 +157,29 @@ export default function HomePage() {
             />
 
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              <a href={siteConfig.business.contact.phoneHref} className="action-card" aria-label="Call FULL MOONs Family Restaurant">
+              <ActionLink href={siteConfig.business.contact.phoneHref} className="action-card" ariaLabel="Call FULL MOONs Family Restaurant">
                 <h3>Call</h3>
                 <p>{siteConfig.business.contact.phoneDisplay}</p>
-              </a>
+              </ActionLink>
 
-              <a href={siteConfig.business.contact.whatsappHref} target="_blank" rel="noopener noreferrer" className="action-card">
+              <ActionLink href={siteConfig.business.contact.whatsappHref} className="action-card">
                 <h3>WhatsApp</h3>
                 <p>Send a quick menu enquiry</p>
-              </a>
+              </ActionLink>
 
-              <a href={siteConfig.links.districtListing} target="_blank" rel="noopener noreferrer" className="action-card">
+              <ActionLink href={siteConfig.links.districtListing} className="action-card">
                 <h3>District Listing</h3>
                 <p>Browse currently published listing details</p>
-              </a>
+              </ActionLink>
 
-              <a
+              <ActionLink
                 href={siteConfig.business.contact.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="action-card"
-                aria-label="Ask about Swiggy and Zomato ordering on WhatsApp"
+                ariaLabel="Ask about Swiggy and Zomato ordering on WhatsApp"
               >
                 <h3>Swiggy &amp; Zomato</h3>
                 <p>Exact listing links pending owner confirmation — tap to ask on WhatsApp →</p>
-              </a>
+              </ActionLink>
             </div>
           </div>
         </section>
@@ -209,9 +208,9 @@ export default function HomePage() {
 
                 <div className="flex flex-wrap gap-3">
                   <DirectionsLink className="btn btn-primary">Get Directions</DirectionsLink>
-                  <a href={siteConfig.business.contact.phoneHref} className="btn btn-secondary">
+                  <ActionLink href={siteConfig.business.contact.phoneHref} className="btn btn-secondary">
                     Call Restaurant
-                  </a>
+                  </ActionLink>
                   <CopyAddressButton address={siteConfig.business.address.full} />
                 </div>
               </div>
@@ -280,13 +279,13 @@ export default function HomePage() {
           <div>
             <p className="eyebrow text-[var(--color-accent)]">Contact</p>
             <p className="mt-4 text-sm leading-relaxed">{siteConfig.business.address.full}</p>
-            <a href={siteConfig.business.contact.phoneHref} className="mt-3 block text-sm hover:text-[var(--color-text-light-primary)]">
+            <ActionLink href={siteConfig.business.contact.phoneHref} className="mt-3 block text-sm hover:text-[var(--color-text-light-primary)]">
               {siteConfig.business.contact.phoneDisplay}
-            </a>
+            </ActionLink>
             <div className="mt-3 flex flex-col gap-2 text-sm">
-              <a href={siteConfig.links.districtListing} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-light-primary)]">
+              <ActionLink href={siteConfig.links.districtListing} className="hover:text-[var(--color-text-light-primary)]">
                 District Listing
-              </a>
+              </ActionLink>
               <DirectionsLink className="hover:text-[var(--color-text-light-primary)]">
                 Google Maps Directions
               </DirectionsLink>

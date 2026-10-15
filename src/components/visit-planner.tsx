@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
+import { ActionLink } from "@/components/action-link";
 import { buildWhatsAppHref, siteConfig } from "@/config/site";
 
 const categories = siteConfig.menuOverview.map((c) => c.category);
@@ -76,9 +77,9 @@ export function VisitPlanner() {
       <p className="mt-2 max-w-[62ch] text-sm leading-relaxed text-[var(--color-text-light-secondary)]">
         Fill this in and we&apos;ll open WhatsApp with your message ready to send — nothing is stored
         on this website. Prefer to talk?{" "}
-        <a href={siteConfig.business.contact.phoneHref} className="font-semibold text-[var(--color-accent)] hover:underline">
+        <ActionLink href={siteConfig.business.contact.phoneHref} className="font-semibold text-[var(--color-accent)] hover:underline">
           Call {siteConfig.business.contact.phoneDisplay}
-        </a>
+        </ActionLink>
         .
       </p>
 

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { ActionLink } from "@/components/action-link";
 import { buildWhatsAppHref, siteConfig } from "@/config/site";
 
 type MenuItem = {
@@ -275,17 +276,15 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
                     <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">
                       {item.description}
                     </p>
-                    <a
+                    <ActionLink
                       href={buildWhatsAppHref(
                         `Hello FULL MOONs Family Restaurant, I would like to enquire about ${item.name} (${category.category}). Please share today's availability and price.`,
                       )}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="mt-4 inline-flex text-sm font-semibold text-[var(--color-accent)] transition group-hover:gap-2 hover:text-[var(--color-accent-deep)] hover:underline"
-                      aria-label={`Enquire about ${item.name} on WhatsApp`}
+                      ariaLabel={`Enquire about ${item.name} on WhatsApp`}
                     >
                       Enquire on WhatsApp →
-                    </a>
+                    </ActionLink>
                   </li>
                 ))}
               </ul>

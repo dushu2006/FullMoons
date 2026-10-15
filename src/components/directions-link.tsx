@@ -1,16 +1,10 @@
-"use client";
-
-import type { MouseEvent, ReactNode } from "react";
+import type { ReactNode } from "react";
+import { ActionLink } from "@/components/action-link";
 import { siteConfig } from "@/config/site";
 
 /**
- * "Get Directions" link.
- *
- * A plain target="_blank" anchor silently does nothing when the site is
- * viewed inside an embedded preview frame, because those frames often
- * block popups. So when we're inside a frame we navigate explicitly:
- * try a new tab first, and if that is blocked, redirect the top page to
- * Google Maps. Viewed standalone, the normal new-tab behaviour applies.
+ * "Get Directions" link — an ActionLink to the Google Maps directions URL
+ * (see action-link.tsx for why framed previews need special handling).
  */
 export function DirectionsLink({
   className,
@@ -21,29 +15,9 @@ export function DirectionsLink({
   children: ReactNode;
   ariaLabel?: string;
 }) {
-  const url = siteConfig.links.directions;
-
-  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (window.self === window.top) return; // standalone: default new-tab behaviour
-
-    event.preventDefault();
-    const opened = window.open(url, "_blank", "noopener,noreferrer");
-    if (!opened) {
-      // Popup blocked by the embedding frame: redirect instead.
-      (window.top ?? window).location.href = url;
-    }
-  };
-
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={className}
-      aria-label={ariaLabel}
-      onClick={handleClick}
-    >
+    <ActionLink href={siteConfig.links.directions} className={className} ariaLabel={ariaLabel}>
       {children}
-    </a>
+    </ActionLink>
   );
 }
