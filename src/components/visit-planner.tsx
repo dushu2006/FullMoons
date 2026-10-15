@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { buildWhatsAppHref, siteConfig } from "@/config/site";
 
 const categories = siteConfig.menuOverview.map((c) => c.category);
@@ -15,8 +15,18 @@ export function VisitPlanner() {
   const [error, setError] = useState("");
   const [whatsAppUrl, setWhatsAppUrl] = useState("");
 
-  const now = new Date();
-  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  // Read the visitor's local date without a hydration mismatch: the
+  // server snapshot is empty (same as server-rendered HTML) and the real
+  // local date is applied right after hydration. The server's timezone
+  // can differ from the phone's, so this must not render inline.
+  const today = useSyncExternalStore(
+    () => () => {},
+    () => {
+      const now = new Date();
+      return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+    },
+    () => "",
+  );
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
