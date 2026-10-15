@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { CopyAddressButton } from "@/components/copy-address-button";
+import { DirectionsLink } from "@/components/directions-link";
 import { FeaturedGrid } from "@/components/featured-grid";
 import { FloatingActions } from "@/components/floating-actions";
 import { GalleryLightbox } from "@/components/gallery-lightbox";
@@ -52,9 +53,7 @@ export default function HomePage() {
                 <Link href={siteConfig.links.primaryCta} className="btn btn-primary">
                   Explore Menu
                 </Link>
-                <a href={siteConfig.links.directions} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                  Get Directions
-                </a>
+                <DirectionsLink className="btn btn-secondary">Get Directions</DirectionsLink>
               </div>
             </div>
 
@@ -209,9 +208,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  <a href={siteConfig.links.directions} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                    Get Directions
-                  </a>
+                  <DirectionsLink className="btn btn-primary">Get Directions</DirectionsLink>
                   <a href={siteConfig.business.contact.phoneHref} className="btn btn-secondary">
                     Call Restaurant
                   </a>
@@ -230,14 +227,9 @@ export default function HomePage() {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-              <a
-                href={siteConfig.links.directions}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent-deep)]"
-              >
+              <DirectionsLink className="mt-3 inline-flex text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent-deep)]">
                 Open full map in Google Maps →
-              </a>
+              </DirectionsLink>
             </div>
           </div>
 
@@ -257,9 +249,7 @@ export default function HomePage() {
               <Link href="#menu" className="btn btn-primary">
                 Explore Menu
               </Link>
-              <a href={siteConfig.links.directions} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                Get Directions
-              </a>
+              <DirectionsLink className="btn btn-secondary">Get Directions</DirectionsLink>
             </div>
           </div>
         </section>
@@ -297,9 +287,9 @@ export default function HomePage() {
               <a href={siteConfig.links.districtListing} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-light-primary)]">
                 District Listing
               </a>
-              <a href={siteConfig.links.directions} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-light-primary)]">
+              <DirectionsLink className="hover:text-[var(--color-text-light-primary)]">
                 Google Maps Directions
-              </a>
+              </DirectionsLink>
             </div>
           </div>
         </div>
