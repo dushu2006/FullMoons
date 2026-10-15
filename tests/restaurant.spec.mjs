@@ -76,11 +76,22 @@ test("menu explorer searches, filters and links to WhatsApp", async ({ page }) =
   await expect(page.getByText("Chicken Dum Biryani")).toBeHidden();
   await expect(page.getByText("Veg Biryani")).toBeVisible();
 
-  // Category pills filter to a single category.
+  // Category pills filter to a single category and auto-scroll the
+  // highlights into view.
   await page.getByLabel(/veg only/i).uncheck();
   await page.getByRole("button", { name: "Seafood", exact: true }).first().click();
   await expect(page.getByText("Fish Curry")).toBeVisible();
   await expect(page.getByText("Veg Biryani")).toBeHidden();
+  await expect
+    .poll(() =>
+      page.evaluate(() => {
+        const el = document.querySelector("#menu-highlights");
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return rect.top >= -20 && rect.top < window.innerHeight;
+      }),
+    )
+    .toBe(true);
 });
 
 test("featured card filters the menu explorer", async ({ page }) => {

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { ActionLink } from "@/components/action-link";
 import { buildWhatsAppHref, siteConfig } from "@/config/site";
 
@@ -27,6 +27,7 @@ const dietLabel: Record<string, string> = {
 };
 
 export function MenuExplorer({ categories }: { categories: readonly MenuCategory[] }) {
+  const highlightsRef = useRef<HTMLDivElement>(null);
   const [selectedOverride, setSelectedOverride] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [vegOnly, setVegOnly] = useState(false);
@@ -45,6 +46,13 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
     (categories.some((c) => c.category === paramCategory) ? paramCategory : "All");
   const setSelected = (category: string) => setSelectedOverride(category);
 
+  const scrollToHighlights = () => {
+    // Wait for the filtered list to render, then bring it into view.
+    requestAnimationFrame(() => {
+      highlightsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
   // Featured cards dispatch this event so exploring never needs a reload.
   useEffect(() => {
     const handler = (event: Event) => {
@@ -53,16 +61,18 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
         setSelected(category);
         setQuery("");
         window.history.replaceState(null, "", `?category=${encodeURIComponent(category)}#menu`);
+        scrollToHighlights();
       }
     };
     window.addEventListener(MENU_CATEGORY_EVENT, handler);
     return () => window.removeEventListener(MENU_CATEGORY_EVENT, handler);
   }, [categories]);
 
-  const selectCategory = (category: string) => {
+  const selectCategory = (category: string, scroll = false) => {
     setSelected(category);
     const url = category === "All" ? "#menu" : `?category=${encodeURIComponent(category)}#menu`;
     window.history.replaceState(null, "", url);
+    if (scroll) scrollToHighlights();
   };
 
   const visibleCategories = useMemo(() => {
@@ -143,7 +153,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
               key={category}
               type="button"
               aria-pressed={selected === category}
-              onClick={() => selectCategory(category)}
+              onClick={() => selectCategory(category, true)}
               className={`rounded-full border px-4 py-2 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] ${
                 selected === category
                   ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-[var(--color-bg-primary)] shadow-[0_6px_20px_rgba(215,180,119,0.35)]"
@@ -172,7 +182,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
               key={item.category}
               type="button"
               aria-pressed={isActive}
-              onClick={() => selectCategory(isActive ? "All" : item.category)}
+              onClick={() => selectCategory(isActive ? "All" : item.category, true)}
               className={`group overflow-hidden border text-left shadow-[0_12px_36px_rgba(0,0,0,0.3)] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] ${
                 isActive
                   ? "border-[var(--color-accent)] ring-2 ring-[var(--color-accent)]"
@@ -213,7 +223,8 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
         })}
       </div>
 
-      {/* Results */}
+      {/* Results — category clicks auto-scroll to here */}
+      <div ref={highlightsRef} id="menu-highlights" className="scroll-mt-28">
       {visibleCategories.length === 0 ? (
         <div className="mt-10 border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-8 text-center">
           <p className="text-3xl" aria-hidden="true">🍽️</p>
@@ -292,6 +303,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 }

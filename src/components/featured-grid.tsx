@@ -12,8 +12,8 @@ type FeaturedItem = {
 
 export function FeaturedGrid({ items }: { items: readonly FeaturedItem[] }) {
   const exploreCategory = (category: string) => {
+    // MenuExplorer listens for this, filters, and scrolls to the highlights.
     window.dispatchEvent(new CustomEvent(MENU_CATEGORY_EVENT, { detail: category }));
-    document.querySelector("#menu")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (

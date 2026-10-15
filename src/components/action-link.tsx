@@ -37,6 +37,10 @@ export function ActionLink({
   const opensNewTab = href.startsWith("http");
   const target = framed ? "_top" : opensNewTab ? "_blank" : undefined;
 
+  // No JS click handling on purpose: a native anchor with target="_top"
+  // (inside frames) or "_blank" (standalone) is the most reliable way to
+  // hand off to Maps / the dialer / WhatsApp — script-initiated popups and
+  // location changes are blocked by embedded frames far more often.
   return (
     <a
       href={href}
@@ -44,20 +48,6 @@ export function ActionLink({
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
       className={className}
       aria-label={ariaLabel}
-      onClick={(event) => {
-        if (!framed) return;
-        // Belt and braces for frames that also restrict _top anchors:
-        // navigate explicitly, falling back through every allowed route.
-        event.preventDefault();
-        try {
-          (window.top ?? window).location.href = href;
-          return;
-        } catch {
-          /* top navigation blocked — try the routes below */
-        }
-        const opened = window.open(href, "_blank", "noopener,noreferrer");
-        if (!opened) window.location.href = href;
-      }}
     >
       {children}
     </a>
