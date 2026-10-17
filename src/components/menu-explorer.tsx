@@ -154,13 +154,11 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
                 <span aria-hidden="true" className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--color-border-dark)] text-xl text-[var(--color-accent)] transition-transform ${isExpanded ? "rotate-180" : ""}`}>⌄</span>
               </button>
 
-              <div
-                id={`menu-section-${category.category.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`}
-                aria-hidden={!isExpanded}
-                className={`grid [overflow-anchor:none] transition-[grid-template-rows] duration-300 ease-in-out motion-reduce:transition-none ${isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
-              >
-                <div className="min-h-0 overflow-hidden">
-                  <div className="border-t border-[var(--color-border-dark)] p-3 sm:p-5">
+              {isExpanded && (
+                <div
+                  id={`menu-section-${category.category.replace(/[^a-z0-9]+/gi, "-", "").toLowerCase()}`}
+                  className="border-t border-[var(--color-border-dark)] p-3 sm:p-5"
+                >
                   <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
                     {category.items.map((item) => (
                       <li key={`${category.category}-${item.name}`} className="border border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] p-4">
@@ -185,7 +183,8 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
                   </ul>
                   </div>
                 </div>
-              </div>
+                </div>
+              )}
             </section>
           );
         })}
