@@ -131,7 +131,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
         {visibleCategories.map((category) => {
           const isExpanded = expandedCategory === category.category;
           return (
-            <section key={category.category} className="overflow-hidden border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)]">
+            <section key={category.category} className="overflow-hidden [overflow-anchor:none] border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)]">
               <button
                 type="button"
                 aria-expanded={isExpanded}
@@ -157,7 +157,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
               <div
                 id={`menu-section-${category.category.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`}
                 aria-hidden={!isExpanded}
-                className={`grid transition-[grid-template-rows] duration-300 ease-in-out motion-reduce:transition-none ${isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+                className={`grid [overflow-anchor:none] transition-[grid-template-rows] duration-300 ease-in-out motion-reduce:transition-none ${isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
               >
                 <div className="min-h-0 overflow-hidden">
                   <div className="border-t border-[var(--color-border-dark)] p-3 sm:p-5">
