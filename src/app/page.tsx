@@ -119,16 +119,18 @@ export default function HomePage() {
           <div className="site-container relative">
             <SectionHeading
               eyebrow="Menu"
-              title="Menu Overview"
+              title="Our Full Menu"
               description={
                 <>
                   <p>
-                    The website presents a category-based menu overview for quick browsing. For latest item-level pricing and real-time availability,
-                    view the current listing.
+                    Browse the dishes and prices transcribed from our printed menu. For ordering, continue to our restaurant listings on Swiggy or Zomato.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <ActionLink href={siteConfig.links.districtListing} className="btn btn-primary">
-                      View Listed Menu
+                    <ActionLink href={siteConfig.links.swiggyListing} className="btn btn-primary">
+                      Order on Swiggy
+                    </ActionLink>
+                    <ActionLink href={siteConfig.links.zomatoListing} className="btn btn-secondary">
+                      Order on Zomato
                     </ActionLink>
                   </div>
                 </>
@@ -156,10 +158,10 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Order & Contact"
               title="Reach FULL MOONs quickly"
-              description="Use your preferred channel to connect. Delivery-platform links are added once the exact listing URLs are owner-confirmed."
+              description="Use your preferred channel to connect. Choose a delivery platform to open the restaurant listing and place your order."
             />
 
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
               <ActionLink href={siteConfig.business.contact.phoneHref} className="action-card" ariaLabel="Call FULL MOONs Family Restaurant">
                 <h3>Call</h3>
                 <p>{siteConfig.business.contact.phoneDisplay}</p>
@@ -170,18 +172,14 @@ export default function HomePage() {
                 <p>Send a quick menu enquiry</p>
               </ActionLink>
 
-              <ActionLink href={siteConfig.links.districtListing} className="action-card">
-                <h3>District Listing</h3>
-                <p>Browse currently published listing details</p>
+              <ActionLink href={siteConfig.links.swiggyListing} className="action-card" ariaLabel="Order from FULL MOONs on Swiggy">
+                <h3>Order on Swiggy</h3>
+                <p>Open restaurant listing →</p>
               </ActionLink>
 
-              <ActionLink
-                href={siteConfig.business.contact.whatsappHref}
-                className="action-card"
-                ariaLabel="Ask about Swiggy and Zomato ordering on WhatsApp"
-              >
-                <h3>Swiggy &amp; Zomato</h3>
-                <p>Exact listing links pending owner confirmation — tap to ask on WhatsApp →</p>
+              <ActionLink href={siteConfig.links.zomatoListing} className="action-card" ariaLabel="Order from FULL MOONs on Zomato">
+                <h3>Order on Zomato</h3>
+                <p>Open restaurant listing →</p>
               </ActionLink>
             </div>
           </div>
@@ -245,13 +243,15 @@ export default function HomePage() {
             <p className="eyebrow mx-auto text-[var(--color-accent)]">Plan ahead</p>
             <h2 className="section-title mt-3 text-[var(--color-text-light-primary)]">Plan Your Next Visit.</h2>
             <p className="mx-auto mt-4 max-w-[62ch] text-[var(--color-text-light-secondary)]">
-              Explore the menu categories, open directions and connect directly before you arrive.
+              Browse the full printed menu, order through Swiggy or Zomato, or get directions to visit us.
             </p>
             <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
               <Link href="#menu" className="btn btn-primary">
                 Explore Menu
               </Link>
               <DirectionsLink className="btn btn-secondary">Get Directions</DirectionsLink>
+              <ActionLink href={siteConfig.links.swiggyListing} className="btn btn-secondary">Order on Swiggy</ActionLink>
+              <ActionLink href={siteConfig.links.zomatoListing} className="btn btn-secondary">Order on Zomato</ActionLink>
             </div>
           </div>
         </section>

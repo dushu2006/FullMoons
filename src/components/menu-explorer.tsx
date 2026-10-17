@@ -9,6 +9,7 @@ type MenuItem = {
   name: string;
   description: string;
   diet: string;
+  price?: number;
 };
 
 type MenuCategory = {
@@ -194,9 +195,8 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
 
         <p aria-live="polite" className="mt-4 text-sm text-[var(--color-text-light-secondary)]">
           <span className="font-heading text-xl font-semibold text-[var(--color-accent)]">{resultCount}</span>{" "}
-          highlight{resultCount === 1 ? "" : "s"} found
-          {selected !== "All" ? ` in ${selected}` : ""}. Prices and today&apos;s availability are
-          confirmed on call or WhatsApp — no prices are published online.
+          dish{resultCount === 1 ? "" : "es"} found
+          {selected !== "All" ? ` in ${selected}` : ""}. Prices shown are transcribed from the printed menu.
         </p>
       </div>
 
@@ -256,11 +256,10 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
         <div className="mt-10 border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-8 text-center">
           <p className="text-3xl" aria-hidden="true">🍽️</p>
           <p className="mt-2 font-heading text-2xl font-semibold text-[var(--color-text-light-primary)]">
-            No highlights match your search
+            No menu items match your search
           </p>
           <p className="mx-auto mt-2 max-w-[52ch] text-sm text-[var(--color-text-light-secondary)]">
-            Try a different word, or ask the restaurant directly — the full menu is available on call
-            and WhatsApp.
+            Try a different word, or ask the restaurant directly — try another search or choose a different category.
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-3">
             <button type="button" onClick={clearFilters} className="btn btn-primary">
@@ -300,7 +299,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
                     className="group border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)]"
                   >
                     <div className="flex items-start justify-between gap-3">
-                      <p className="font-heading text-xl font-semibold leading-snug text-[var(--color-text-light-primary)]">{item.name}</p>
+                      <div className="min-w-0"><p className="font-heading text-xl font-semibold leading-snug text-[var(--color-text-light-primary)]">{item.name}</p>{item.price !== undefined ? <p className="mt-2 text-lg font-bold text-[var(--color-accent)]">₹{item.price}</p> : null}</div>
                       <span
                         className={`mt-0.5 shrink-0 rounded-full border px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
                           item.diet === "veg"
