@@ -6,6 +6,7 @@ import { CopyAddressButton } from "@/components/copy-address-button";
 import { DirectionsLink } from "@/components/directions-link";
 import { FloatingActions } from "@/components/floating-actions";
 import { MenuExplorer } from "@/components/menu-explorer";
+import { MenuShowcase } from "@/components/menu-showcase";
 import { VisitPlanner } from "@/components/visit-planner";
 import { SectionHeading } from "@/components/section-heading";
 import { BrandIntro } from "@/components/brand-intro";
@@ -109,27 +110,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section-space bg-[var(--color-bg-primary)]">
+        <section id="menu-highlights" className="section-space bg-[var(--color-bg-primary)]">
           <div className="site-container">
             <SectionHeading
-              eyebrow="Good to know"
-              title="A good meal starts with the right choice"
-              description="Take a moment to explore the range, compare printed menu prices, and choose how you would like to enjoy FULL MOONs."
+              eyebrow="About the Menu"
+              title="A little something for every appetite"
+              description="Browse vegetarian and non-vegetarian favourites as they glide by. Choose a category to pause its row and explore dishes with their printed menu prices."
             />
-            <div className="grid gap-4 md:grid-cols-3">
-              <div className="scroll-reveal scroll-interactive border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
-                <h3 className="font-heading text-xl font-semibold">Find your kind of meal</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Start with soups and starters, explore biryanis and main-course dishes, or look through rice, noodles, curries and Indian breads. Search and dietary filters help you narrow the list.</p>
-              </div>
-              <div className="scroll-reveal scroll-interactive border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
-                <h3 className="font-heading text-xl font-semibold">Make an informed choice</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Compare the listed prices and check the dish details before deciding. Menu prices, availability and offers may change, so confirm the latest information before ordering.</p>
-              </div>
-              <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
-                <h3 className="font-heading text-xl font-semibold">Choose your next step</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Order delivery through Swiggy or Zomato, check dine-in options on District, call with a question, or open directions to the restaurant in New Gajuwaka.</p>
-              </div>
-            </div>
+            <MenuShowcase categories={siteConfig.menuOverview} />
           </div>
         </section>
 

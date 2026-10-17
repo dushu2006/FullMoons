@@ -397,3 +397,167 @@ body.brand-intro-running [data-brand-logo] {
     padding: 12px;
   }
 }
+
+
+/* Animated menu showcase: two independent, seamless horizontal lanes. */
+.menu-showcase {
+  display: grid;
+  gap: 28px;
+}
+.menu-showcase-row {
+  min-width: 0;
+  border: 1px solid var(--color-border-dark);
+  background: linear-gradient(135deg, rgba(215, 180, 119, 0.045), transparent 55%), var(--color-bg-secondary);
+  padding: clamp(14px, 2vw, 22px);
+}
+.menu-showcase-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.menu-showcase-select {
+  width: min(100%, 260px);
+  min-height: 44px;
+  border: 1px solid var(--color-border-dark);
+  border-radius: 4px;
+  padding: 0 38px 0 12px;
+  background: var(--color-bg-primary);
+  color: var(--color-text-light-primary);
+  font: 500 0.875rem/1.2 var(--font-body);
+}
+.menu-showcase-select:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+.menu-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+}
+.menu-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: menu-marquee-scroll var(--menu-marquee-duration, 100s) linear infinite;
+  will-change: transform;
+}
+.menu-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 14px;
+  padding-right: 14px;
+}
+.menu-marquee:hover .menu-marquee-track,
+.menu-marquee:focus-within .menu-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes menu-marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+.menu-dish-card {
+  display: flex;
+  width: clamp(174px, 20vw, 238px);
+  flex: 0 0 auto;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border-dark);
+  background: var(--color-bg-primary);
+  transition: border-color 220ms ease, transform 220ms ease, background-color 220ms ease;
+}
+.menu-dish-image {
+  position: relative;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+}
+.menu-dish-image img {
+  transition: transform 420ms ease;
+}
+.menu-dish-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px;
+}
+.menu-dish-name {
+  color: var(--color-text-light-primary);
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.menu-dish-category {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+.menu-dish-price {
+  margin-top: auto;
+  color: var(--color-accent);
+  font-size: 1rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.menu-static-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.menu-static-grid .menu-dish-card {
+  width: auto;
+  min-width: 0;
+}
+.menu-showcase-status {
+  margin-top: 12px;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+@media (hover: hover) and (pointer: fine) {
+  .menu-dish-card:hover {
+    border-color: var(--color-accent);
+    background: rgba(215, 180, 119, 0.035);
+    transform: translateY(-3px);
+  }
+  .menu-dish-card:hover .menu-dish-image img {
+    transform: scale(1.05);
+  }
+}
+@media (min-width: 640px) {
+  .menu-static-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .menu-static-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .menu-showcase { gap: 18px; }
+  .menu-showcase-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu-showcase-select { width: 100%; }
+  .menu-marquee-group { gap: 10px; padding-right: 10px; }
+  .menu-dish-copy { padding: 10px; }
+  .menu-dish-name { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .menu-marquee-track {
+    animation: none !important;
+    transform: none !important;
+    will-change: auto;
+  }
+  .menu-marquee-copy { display: none !important; }
+  .menu-dish-card,
+  .menu-dish-image img { transition: none !important; }
+}
