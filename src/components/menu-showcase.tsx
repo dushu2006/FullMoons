@@ -121,7 +121,7 @@ function DietShowcaseRow({
   };
 
   return (
-    <section className={`menu-showcase-row scroll-reveal ${categoryMenuOpen ? "category-open" : ""}`} aria-label={`${label} menu`}>
+    <section className={`menu-showcase-row ${categoryMenuOpen ? "category-open" : ""}`} aria-label={`${label} menu`}>
       <div className="menu-showcase-heading">
         <div className="menu-showcase-title">
           <span className={`menu-diet-indicator ${diet === "veg" ? "is-veg" : "is-nonveg"}`} aria-hidden="true" />
