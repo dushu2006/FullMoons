@@ -156,7 +156,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
 
               {isExpanded && (
                 <div
-                  id={`menu-section-${category.category.replace(/[^a-z0-9]+/gi, "-", "").toLowerCase()}`}
+                  id={`menu-section-${category.category.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`}
                   className="border-t border-[var(--color-border-dark)] p-3 sm:p-5"
                 >
                   <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -181,8 +181,6 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
                       </li>
                     ))}
                   </ul>
-                  </div>
-                </div>
                 </div>
               )}
             </section>
