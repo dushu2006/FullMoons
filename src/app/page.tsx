@@ -79,7 +79,7 @@ export default function HomePage() {
 
         <section id="about" className="section-space bg-[var(--color-bg-secondary)]">
           <div className="site-container grid gap-8 lg:grid-cols-2 lg:items-center">
-            <div className="overflow-hidden border border-[var(--color-border-dark)]">
+            <div className="overflow-hidden border border-[var(--color-border-dark)] scroll-interactive">
               <Image
                 src={siteConfig.intro.image.src}
                 alt={siteConfig.intro.image.alt}
@@ -110,14 +110,14 @@ export default function HomePage() {
         </section>
 
         <section className="section-space bg-[var(--color-bg-primary)]">
-          <div className="site-container">
+          <div className="site-container scroll-reveal">
             <SectionHeading
               eyebrow="Good to know"
               title="A good meal starts with the right choice"
               description="Take a moment to explore the range, compare printed menu prices, and choose how you would like to enjoy FULL MOONs."
             />
             <div className="grid gap-4 md:grid-cols-3">
-              <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
+              <div className="scroll-reveal scroll-interactive border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
                 <h3 className="font-heading text-xl font-semibold">Find your kind of meal</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Start with soups and starters, explore biryanis and main-course dishes, or look through rice, noodles, curries and Indian breads. Search and dietary filters help you narrow the list.</p>
               </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
         <section id="menu" className="menu-bg section-space relative overflow-hidden bg-[var(--color-bg-primary)] text-[var(--color-text-light-primary)]">
           <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-[var(--color-accent)]/10 blur-3xl" />
           <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-[var(--color-spice)]/20 blur-3xl" />
-          <div className="site-container relative">
+          <div className="site-container relative scroll-reveal">
             <SectionHeading
               eyebrow="Menu"
               title="Explore by Category"
@@ -202,7 +202,7 @@ export default function HomePage() {
         </section>
 
         <section id="visit-us" className="section-space bg-[var(--color-bg-primary)]">
-          <div className="site-container grid gap-7 lg:grid-cols-2">
+          <div className="site-container grid gap-7 lg:grid-cols-2 scroll-reveal">
             <div>
               <SectionHeading
                 eyebrow="Visit Us"
@@ -255,7 +255,7 @@ export default function HomePage() {
         </section>
 
         <section className="section-space bg-[var(--color-bg-secondary)] py-16">
-          <div className="site-container text-center">
+          <div className="site-container text-center scroll-reveal">
             <p className="eyebrow mx-auto text-[var(--color-accent)]">Plan ahead</p>
             <h2 className="section-title mt-3 text-[var(--color-text-light-primary)]">Plan Your Next Visit.</h2>
             <p className="mx-auto mt-4 max-w-[62ch] text-[var(--color-text-light-secondary)]">
@@ -275,7 +275,7 @@ export default function HomePage() {
       </main>
 
       <footer className="border-t border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] py-12 text-[var(--color-text-light-secondary)]">
-        <div className="site-container grid gap-8 md:grid-cols-3">
+        <div className="site-container grid gap-8 md:grid-cols-3 scroll-reveal">
           <div>
             <p className="font-heading text-3xl font-semibold text-[var(--color-text-light-primary)]">FULL MOONs</p>
             <p className="mt-3 max-w-[34ch] text-sm leading-relaxed">
