@@ -287,3 +287,91 @@ body.brand-intro-running [data-brand-logo] {
     visibility: visible !important;
   }
 }
+
+
+/* Scroll-led motion: sections enter gently as they reach the viewport. */
+.scroll-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.scroll-effects-ready .scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 650ms cubic-bezier(0.2, 0.65, 0.3, 1), transform 650ms cubic-bezier(0.2, 0.65, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-effects-ready .scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.scroll-effects-ready .scroll-reveal[data-reveal="left"] {
+  transform: translate3d(-24px, 0, 0);
+}
+
+.scroll-effects-ready .scroll-reveal[data-reveal="right"] {
+  transform: translate3d(24px, 0, 0);
+}
+
+.scroll-effects-ready .scroll-reveal[data-reveal="left"].is-visible,
+.scroll-effects-ready .scroll-reveal[data-reveal="right"].is-visible {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Subtle pointer feedback on interactive surfaces; no hover-only content. */
+@media (hover: hover) and (pointer: fine) {
+  .menu-bg .group:hover img {
+    transform: scale(1.045);
+  }
+
+  .menu-bg [data-menu-item],
+  .menu-bg li {
+    transition: border-color 220ms ease, background-color 220ms ease, transform 220ms ease;
+  }
+
+  .menu-bg li:hover {
+    border-color: var(--color-accent);
+    background-color: rgba(215, 180, 119, 0.045);
+    transform: translateY(-2px);
+  }
+
+  .scroll-interactive {
+    transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .scroll-interactive:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  }
+}
+
+/* Keep motion short and comfortable on small screens. */
+@media (max-width: 640px) {
+  .scroll-effects-ready .scroll-reveal {
+    transform: translate3d(0, 14px, 0);
+    transition-duration: 480ms;
+  }
+
+  .scroll-effects-ready .scroll-reveal[data-reveal="left"],
+  .scroll-effects-ready .scroll-reveal[data-reveal="right"] {
+    transform: translate3d(0, 14px, 0);
+  }
+
+  .site-container {
+    padding-inline: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-effects-ready .scroll-reveal,
+  .scroll-effects-ready .scroll-reveal[data-reveal="left"],
+  .scroll-effects-ready .scroll-reveal[data-reveal="right"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}
