@@ -10,6 +10,7 @@ import "@fontsource/manrope/500.css";
 import "@fontsource/manrope/600.css";
 import "@fontsource/manrope/700.css";
 import "./globals.css";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000");
 
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <noscript>
           <style>{".brand-intro { display: none !important; }"}</style>
         </noscript>
+        <ScrollReveal />
         {children}
       </body>
     </html>
