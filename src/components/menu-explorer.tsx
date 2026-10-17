@@ -131,7 +131,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
         {visibleCategories.map((category) => {
           const isExpanded = expandedCategory === category.category;
           return (
-            <section key={category.category} className="overflow-hidden [overflow-anchor:none] border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)]">
+            <section key={category.category} className="scroll-reveal overflow-hidden [overflow-anchor:none] border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)]">
               <button
                 type="button"
                 aria-expanded={isExpanded}
@@ -161,7 +161,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
                 >
                   <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
                     {category.items.map((item) => (
-                      <li key={`${category.category}-${item.name}`} className="border border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] p-4">
+                      <li key={`${category.category}-${item.name}`} className="scroll-reveal border border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] p-4">
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
                             <p className="font-heading text-lg font-semibold leading-snug text-[var(--color-text-light-primary)]">{item.name}</p>
