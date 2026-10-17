@@ -119,11 +119,11 @@ export default function HomePage() {
           <div className="site-container relative">
             <SectionHeading
               eyebrow="Menu"
-              title="Our Full Menu"
+              title="Explore by Category"
               description={
                 <>
                   <p>
-                    Browse the dishes and prices transcribed from our printed menu. For ordering, continue to our restaurant listings on Swiggy or Zomato.
+                    Choose a section to expand its dishes and printed prices. Search for a favourite, or order through Swiggy or Zomato.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     <ActionLink href={siteConfig.links.swiggyListing} className="btn btn-primary">
