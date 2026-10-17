@@ -375,3 +375,25 @@ body.brand-intro-running [data-brand-logo] {
     will-change: auto;
   }
 }
+
+
+/* Gallery tiles use a restrained editorial hover effect. */
+.gallery-tile {
+  background: var(--color-bg-primary);
+}
+
+.gallery-image {
+  transition: transform 600ms cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gallery-tile:hover .gallery-image {
+    transform: scale(1.055);
+  }
+}
+
+@media (max-width: 420px) {
+  .gallery-tile figcaption {
+    padding: 12px;
+  }
+}
