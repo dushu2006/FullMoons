@@ -51,6 +51,9 @@ export default function HomePage() {
               <p className="mt-6 max-w-[60ch] text-[clamp(1rem,1.2vw,1.125rem)] leading-relaxed text-[var(--color-text-light-secondary)]">
                 {siteConfig.hero.description}
               </p>
+              <p className="mt-4 max-w-[58ch] text-sm leading-relaxed text-[var(--color-muted)]">
+                From comforting soups and crispy starters to biryanis, curries, rice, noodles and Indian breads, explore a menu with options for different tastes and appetites.
+              </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href={siteConfig.links.primaryCta} className="btn btn-primary">
                   Explore Menu
@@ -93,8 +96,14 @@ export default function HomePage() {
               <p className="mt-5 max-w-[62ch] text-base leading-relaxed text-[var(--color-text-light-secondary)]">
                 {siteConfig.intro.description}
               </p>
+              <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-[var(--color-text-light-secondary)]">
+                Whether you are deciding on a familiar comfort dish, sharing starters with friends, or choosing a full meal with rice and curry, use the menu to compare options before you order. Vegetarian and non-vegetarian choices are marked to make browsing easier.
+              </p>
+              <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-[var(--color-text-light-secondary)]">
+                Located on Main Road in New Gajuwaka, FULL MOONs gives you a simple starting point for planning a meal: explore the printed menu, check current availability, then choose delivery or a visit.
+              </p>
               <p className="mt-5 rounded-sm border border-[var(--color-border-dark)] bg-[var(--color-bg-primary)] p-4 text-sm leading-relaxed text-[var(--color-muted)]">
-                {siteConfig.business.sourceNote}
+                Menu prices and availability can change. Please confirm current details with the restaurant or your chosen ordering platform.
               </p>
             </div>
           </div>
@@ -104,21 +113,21 @@ export default function HomePage() {
           <div className="site-container">
             <SectionHeading
               eyebrow="Good to know"
-              title="A little help before you order"
-              description="Explore the menu by category, check the listed prices, and choose the option that suits your visit."
+              title="A good meal starts with the right choice"
+              description="Take a moment to explore the range, compare printed menu prices, and choose how you would like to enjoy FULL MOONs."
             />
             <div className="grid gap-4 md:grid-cols-3">
               <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
-                <h3 className="font-heading text-xl font-semibold">Browse the menu</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Open any category to see dishes and prices transcribed from the printed menu. Use search or the veg-only filter to narrow your choices.</p>
+                <h3 className="font-heading text-xl font-semibold">Find your kind of meal</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Start with soups and starters, explore biryanis and main-course dishes, or look through rice, noodles, curries and Indian breads. Search and dietary filters help you narrow the list.</p>
               </div>
               <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
-                <h3 className="font-heading text-xl font-semibold">Confirm availability</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Prices, availability, and offers may change. Confirm the latest details with the restaurant or on the delivery platform before placing an order.</p>
+                <h3 className="font-heading text-xl font-semibold">Make an informed choice</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Compare the listed prices and check the dish details before deciding. Menu prices, availability and offers may change, so confirm the latest information before ordering.</p>
               </div>
               <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
-                <h3 className="font-heading text-xl font-semibold">Choose how to enjoy</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Order delivery through Swiggy or Zomato, explore dine-in options on District, or visit the restaurant in New Gajuwaka.</p>
+                <h3 className="font-heading text-xl font-semibold">Choose your next step</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Order delivery through Swiggy or Zomato, check dine-in options on District, call with a question, or open directions to the restaurant in New Gajuwaka.</p>
               </div>
             </div>
           </div>
