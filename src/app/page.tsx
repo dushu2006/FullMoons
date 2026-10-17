@@ -202,6 +202,24 @@ export default function HomePage() {
                 </div>
                 <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Rice & noodles</span><p className="mt-1 font-heading text-lg sm:text-xl">Everyday favourites</p></figcaption>
               </figure>
+              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image src="/images/featured-starters.jpg" alt="Illustrative crispy starter selection" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
+                </div>
+                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Crispy starters</span><p className="mt-1 font-heading text-lg sm:text-xl">Small plates to begin</p></figcaption>
+              </figure>
+              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image src="/images/gallery-curry.jpg" alt="Illustrative Indian curry selection" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
+                </div>
+                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Main course</span><p className="mt-1 font-heading text-lg sm:text-xl">Curries for the table</p></figcaption>
+              </figure>
+              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image src="/images/featured-veg.jpg" alt="Illustrative Indian vegetarian meal" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
+                </div>
+                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Meal ideas</span><p className="mt-1 font-heading text-lg sm:text-xl">Build your own spread</p></figcaption>
+              </figure>
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="#menu" className="btn btn-primary">Explore Full Menu</Link>
