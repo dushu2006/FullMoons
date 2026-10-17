@@ -126,11 +126,14 @@ export default function HomePage() {
                     Choose a section to expand its dishes and printed prices. Search for a favourite, or order through Swiggy or Zomato.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <ActionLink href={siteConfig.links.swiggyListing} className="btn btn-primary">
+                    <ActionLink href={siteConfig.links.swiggyListing} className="btn border-transparent bg-[#FC8019] text-white hover:bg-[#e66f0e] focus-visible:outline-[#FC8019]">
                       Order on Swiggy
                     </ActionLink>
-                    <ActionLink href={siteConfig.links.zomatoListing} className="btn btn-secondary">
+                    <ActionLink href={siteConfig.links.zomatoListing} className="btn border-transparent bg-[#E23744] text-white hover:bg-[#c92e3a] focus-visible:outline-[#E23744]">
                       Order on Zomato
+                    </ActionLink>
+                    <ActionLink href={siteConfig.links.districtListing} className="btn border-transparent bg-[#6C3CF0] text-white hover:bg-[#572bd0] focus-visible:outline-[#6C3CF0]">
+                      Book Dine-in on District
                     </ActionLink>
                   </div>
                 </>
@@ -172,14 +175,19 @@ export default function HomePage() {
                 <p>Send a quick menu enquiry</p>
               </ActionLink>
 
-              <ActionLink href={siteConfig.links.swiggyListing} className="action-card" ariaLabel="Order from FULL MOONs on Swiggy">
-                <h3>Order on Swiggy</h3>
+              <ActionLink href={siteConfig.links.swiggyListing} className="action-card border-[#FC8019]/60 hover:border-[#FC8019] hover:bg-[#FC8019]/10" ariaLabel="Order from FULL MOONs on Swiggy">
+                <h3 className="text-[#FC8019]">Order on Swiggy</h3>
                 <p>Open restaurant listing →</p>
               </ActionLink>
 
-              <ActionLink href={siteConfig.links.zomatoListing} className="action-card" ariaLabel="Order from FULL MOONs on Zomato">
-                <h3>Order on Zomato</h3>
+              <ActionLink href={siteConfig.links.zomatoListing} className="action-card border-[#E23744]/60 hover:border-[#E23744] hover:bg-[#E23744]/10" ariaLabel="Order from FULL MOONs on Zomato">
+                <h3 className="text-[#E23744]">Order on Zomato</h3>
                 <p>Open restaurant listing →</p>
+              </ActionLink>
+
+              <ActionLink href={siteConfig.links.districtListing} className="action-card border-[#6C3CF0]/60 hover:border-[#6C3CF0] hover:bg-[#6C3CF0]/10" ariaLabel="Book a dine-in experience for FULL MOONs on District">
+                <h3 className="text-[#9B7AFF]">Dine-in on District</h3>
+                <p>Discover dine-in options →</p>
               </ActionLink>
             </div>
           </div>
@@ -250,8 +258,9 @@ export default function HomePage() {
                 Explore Menu
               </Link>
               <DirectionsLink className="btn btn-secondary">Get Directions</DirectionsLink>
-              <ActionLink href={siteConfig.links.swiggyListing} className="btn btn-secondary">Order on Swiggy</ActionLink>
-              <ActionLink href={siteConfig.links.zomatoListing} className="btn btn-secondary">Order on Zomato</ActionLink>
+              <ActionLink href={siteConfig.links.swiggyListing} className="btn border-transparent bg-[#FC8019] text-white hover:bg-[#e66f0e]">Order on Swiggy</ActionLink>
+              <ActionLink href={siteConfig.links.zomatoListing} className="btn border-transparent bg-[#E23744] text-white hover:bg-[#c92e3a]">Order on Zomato</ActionLink>
+              <ActionLink href={siteConfig.links.districtListing} className="btn border-transparent bg-[#6C3CF0] text-white hover:bg-[#572bd0]">Dine-in on District</ActionLink>
             </div>
           </div>
         </section>
