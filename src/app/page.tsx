@@ -5,7 +5,6 @@ import { ActionLink } from "@/components/action-link";
 import { CopyAddressButton } from "@/components/copy-address-button";
 import { DirectionsLink } from "@/components/directions-link";
 import { FloatingActions } from "@/components/floating-actions";
-import { MenuExplorer } from "@/components/menu-explorer";
 import { MenuShowcase } from "@/components/menu-showcase";
 import { VisitPlanner } from "@/components/visit-planner";
 import { SectionHeading } from "@/components/section-heading";
@@ -110,28 +109,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="menu-highlights" className="section-space bg-[var(--color-bg-primary)]">
-          <div className="site-container">
-            <SectionHeading
-              eyebrow="About the Menu"
-              title="A little something for every appetite"
-              description="Browse vegetarian and non-vegetarian favourites as they glide by. Choose a category to pause its row and explore dishes with their printed menu prices."
-            />
-            <MenuShowcase categories={siteConfig.menuOverview} />
-          </div>
-        </section>
-
         <section id="menu" className="menu-bg section-space relative overflow-hidden bg-[var(--color-bg-primary)] text-[var(--color-text-light-primary)]">
           <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-[var(--color-accent)]/10 blur-3xl" />
           <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-[var(--color-spice)]/20 blur-3xl" />
-          <div className="site-container relative scroll-reveal">
+          <div className="site-container relative">
             <SectionHeading
-              eyebrow="Menu"
-              title="Explore by Category"
+              eyebrow="About the Menu"
+              title="Explore Veg & Non-Veg Favourites"
               description={
                 <>
                   <p>
-                    Choose a section to expand its dishes and printed prices. Search for a favourite, or order through Swiggy or Zomato.
+                    Browse both menus as they glide by. Each dish displays its name, image and printed-menu price. Choose a category to stop that row and see its dishes together.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     <ActionLink href={siteConfig.links.swiggyListing} className="btn border-transparent bg-[#FC8019] text-white hover:bg-[#e66f0e] focus-visible:outline-[#FC8019]">
@@ -147,8 +135,7 @@ export default function HomePage() {
                 </>
               }
             />
-
-            <MenuExplorer categories={siteConfig.menuOverview} />
+            <MenuShowcase categories={siteConfig.menuOverview} />
           </div>
         </section>
 
