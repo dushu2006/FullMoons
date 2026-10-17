@@ -4,9 +4,7 @@ import { siteConfig } from "@/config/site";
 import { ActionLink } from "@/components/action-link";
 import { CopyAddressButton } from "@/components/copy-address-button";
 import { DirectionsLink } from "@/components/directions-link";
-import { FeaturedGrid } from "@/components/featured-grid";
 import { FloatingActions } from "@/components/floating-actions";
-import { GalleryLightbox } from "@/components/gallery-lightbox";
 import { MenuExplorer } from "@/components/menu-explorer";
 import { VisitPlanner } from "@/components/visit-planner";
 import { SectionHeading } from "@/components/section-heading";
@@ -105,11 +103,24 @@ export default function HomePage() {
         <section className="section-space bg-[var(--color-bg-primary)]">
           <div className="site-container">
             <SectionHeading
-              eyebrow="Featured"
-              title="A Menu Worth Exploring"
-              description="Selected categories from publicly listed menu sections. Individual dish availability and prices should be confirmed directly with the restaurant."
+              eyebrow="Good to know"
+              title="A little help before you order"
+              description="Explore the menu by category, check the listed prices, and choose the option that suits your visit."
             />
-            <FeaturedGrid items={siteConfig.featured} />
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
+                <h3 className="font-heading text-xl font-semibold">Browse the menu</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Open any category to see dishes and prices transcribed from the printed menu. Use search or the veg-only filter to narrow your choices.</p>
+              </div>
+              <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
+                <h3 className="font-heading text-xl font-semibold">Confirm availability</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Prices, availability, and offers may change. Confirm the latest details with the restaurant or on the delivery platform before placing an order.</p>
+              </div>
+              <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
+                <h3 className="font-heading text-xl font-semibold">Choose how to enjoy</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Order delivery through Swiggy or Zomato, explore dine-in options on District, or visit the restaurant in New Gajuwaka.</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -141,18 +152,6 @@ export default function HomePage() {
             />
 
             <MenuExplorer categories={siteConfig.menuOverview} />
-          </div>
-        </section>
-
-        <section id="gallery" className="section-space bg-[var(--color-bg-cream)] text-[var(--color-text-dark-primary)]">
-          <div className="site-container">
-            <SectionHeading
-              eyebrow="Gallery"
-              title="Food Gallery"
-              theme="dark"
-              description="Images below are illustrative visuals for design preview and should be replaced with owner-approved restaurant photography before final publication."
-            />
-            <GalleryLightbox images={siteConfig.gallery} />
           </div>
         </section>
 
