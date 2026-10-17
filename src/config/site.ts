@@ -26,7 +26,6 @@ export const siteConfig = {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Menu", href: "#menu" },
-    { label: "Gallery", href: "#gallery" },
     { label: "Visit Us", href: "#visit-us" },
   ],
   links: {
@@ -62,44 +61,6 @@ export const siteConfig = {
       alt: "Illustrative assortment of Indian dishes arranged on a table",
     },
   },
-  featured: [
-    {
-      title: "Biryani",
-      menuCategory: "Biryani",
-      description: "Fragrant rice specials across veg and non-veg options.",
-      image: "/images/hero-biryani.jpg",
-    },
-    {
-      title: "Seafood",
-      menuCategory: "Seafood",
-      description: "Regional seafood preparations with bold Indian flavours.",
-      image: "/images/featured-seafood.jpg",
-    },
-    {
-      title: "Vegetarian",
-      menuCategory: "Veg",
-      description: "Comforting vegetarian dishes, curries and sides.",
-      image: "/images/featured-veg.jpg",
-    },
-    {
-      title: "Starters",
-      menuCategory: "Starters",
-      description: "Tandoori and pan-fried starters to begin your meal.",
-      image: "/images/featured-starters.jpg",
-    },
-    {
-      title: "Rice & Noodles",
-      menuCategory: "Rice and Noodles",
-      description: "Quick favourites from rice bowls to Indo-Chinese noodles.",
-      image: "/images/featured-noodles.jpg",
-    },
-    {
-      title: "Chicken & Mutton",
-      menuCategory: "Chicken",
-      description: "Popular gravies and dry dishes from classic meat sections.",
-      image: "/images/gallery-curry.jpg",
-    },
-  ],
   // Transcribed from the restaurant's printed menu screenshots supplied for this update.
   // Prices are shown in INR and should be kept aligned with the physical menu.
   menuOverview: [
@@ -398,32 +359,7 @@ export const siteConfig = {
       ],
     },
   ],
-  gallery: [
-    {
-      src: "/images/hero-biryani.jpg",
-      alt: "Illustrative biryani close-up",
-    },
-    {
-      src: "/images/featured-seafood.jpg",
-      alt: "Illustrative seafood curry close-up",
-    },
-    {
-      src: "/images/featured-veg.jpg",
-      alt: "Illustrative vegetarian platter",
-    },
-    {
-      src: "/images/featured-starters.jpg",
-      alt: "Illustrative Indian starters platter",
-    },
-    {
-      src: "/images/gallery-bread.jpg",
-      alt: "Illustrative Indian bread basket",
-    },
-    {
-      src: "/images/gallery-rice.jpg",
-      alt: "Illustrative rice and curry serving",
-    },
-  ],
+
 } as const;
 
 export type SiteConfig = typeof siteConfig;
