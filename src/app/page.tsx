@@ -45,7 +45,7 @@ export default function HomePage() {
       <main id="home-content" className="bg-[var(--color-bg-primary)] text-[var(--color-text-light-primary)]">
         <section id="home" className="section-space border-b border-[var(--color-border-dark)]">
           <div className="site-container grid items-center gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-            <div>
+            <div className="scroll-reveal" data-reveal="left">
               <p className="eyebrow text-[var(--color-accent)]">{siteConfig.hero.eyebrow}</p>
               <h1 className="hero-title mt-4 max-w-[18ch] text-[var(--color-text-light-primary)]">{siteConfig.hero.title}</h1>
               <p className="mt-6 max-w-[60ch] text-[clamp(1rem,1.2vw,1.125rem)] leading-relaxed text-[var(--color-text-light-secondary)]">
@@ -62,7 +62,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)]">
+            <div className="scroll-reveal scroll-interactive relative overflow-hidden border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)]" data-reveal="right">
               <Image
                 src={siteConfig.hero.image.src}
                 alt={siteConfig.hero.image.alt}
@@ -90,7 +90,7 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 100vw, 48vw"
               />
             </div>
-            <div>
+            <div className="scroll-reveal" data-reveal="right">
               <p className="eyebrow text-[var(--color-accent)]">{siteConfig.intro.eyebrow}</p>
               <h2 className="section-title mt-3 text-[var(--color-text-light-primary)]">{siteConfig.intro.title}</h2>
               <p className="mt-5 max-w-[62ch] text-base leading-relaxed text-[var(--color-text-light-secondary)]">
@@ -121,7 +121,7 @@ export default function HomePage() {
                 <h3 className="font-heading text-xl font-semibold">Find your kind of meal</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Start with soups and starters, explore biryanis and main-course dishes, or look through rice, noodles, curries and Indian breads. Search and dietary filters help you narrow the list.</p>
               </div>
-              <div className="border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
+              <div className="scroll-reveal scroll-interactive border border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)] p-5">
                 <h3 className="font-heading text-xl font-semibold">Make an informed choice</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-light-secondary)]">Compare the listed prices and check the dish details before deciding. Menu prices, availability and offers may change, so confirm the latest information before ordering.</p>
               </div>
@@ -219,27 +219,27 @@ export default function HomePage() {
             />
 
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-              <ActionLink href={siteConfig.business.contact.phoneHref} className="action-card" ariaLabel="Call FULL MOONs Family Restaurant">
+              <ActionLink href={siteConfig.business.contact.phoneHref} className="action-card scroll-reveal" ariaLabel="Call FULL MOONs Family Restaurant">
                 <h3>Call</h3>
                 <p>{siteConfig.business.contact.phoneDisplay}</p>
               </ActionLink>
 
-              <ActionLink href={siteConfig.business.contact.whatsappHref} className="action-card">
+              <ActionLink href={siteConfig.business.contact.whatsappHref} className="action-card scroll-reveal">
                 <h3>WhatsApp</h3>
                 <p>Send a quick menu enquiry</p>
               </ActionLink>
 
-              <ActionLink href={siteConfig.links.swiggyListing} className="action-card border-[#FC8019]/60 hover:border-[#FC8019] hover:bg-[#FC8019]/10" ariaLabel="Order from FULL MOONs on Swiggy">
+              <ActionLink href={siteConfig.links.swiggyListing} className="action-card scroll-reveal border-[#FC8019]/60 hover:border-[#FC8019] hover:bg-[#FC8019]/10" ariaLabel="Order from FULL MOONs on Swiggy">
                 <h3 className="text-[#FC8019]">Order on Swiggy</h3>
                 <p>Open restaurant listing →</p>
               </ActionLink>
 
-              <ActionLink href={siteConfig.links.zomatoListing} className="action-card border-[#E23744]/60 hover:border-[#E23744] hover:bg-[#E23744]/10" ariaLabel="Order from FULL MOONs on Zomato">
+              <ActionLink href={siteConfig.links.zomatoListing} className="action-card scroll-reveal border-[#E23744]/60 hover:border-[#E23744] hover:bg-[#E23744]/10" ariaLabel="Order from FULL MOONs on Zomato">
                 <h3 className="text-[#E23744]">Order on Zomato</h3>
                 <p>Open restaurant listing →</p>
               </ActionLink>
 
-              <ActionLink href={siteConfig.links.districtListing} className="action-card border-[#6C3CF0]/60 hover:border-[#6C3CF0] hover:bg-[#6C3CF0]/10" ariaLabel="Book a dine-in experience for FULL MOONs on District">
+              <ActionLink href={siteConfig.links.districtListing} className="action-card scroll-reveal border-[#6C3CF0]/60 hover:border-[#6C3CF0] hover:bg-[#6C3CF0]/10" ariaLabel="Book a dine-in experience for FULL MOONs on District">
                 <h3 className="text-[#9B7AFF]">Dine-in on District</h3>
                 <p>Discover dine-in options →</p>
               </ActionLink>
