@@ -1,6 +1,6 @@
 # FULL MOONs — Image Manifest
 
-Generated on 2026-10-18T01:00:47.837Z by `scripts/build-image-manifest-docs.mjs` from the live menu data. This document is the auditable record of every photograph on the website and the dish it represents.
+Generated on 2026-10-18T01:53:18.775Z by `scripts/build-image-manifest-docs.mjs` from the live menu data. This document is the auditable record of every photograph on the website and the dish it represents.
 
 ## Section imagery
 
