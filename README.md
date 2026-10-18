@@ -88,8 +88,19 @@ Before publishing live, owner should verify:
 
 ## Image policy in current build
 
-- Food photos live in `public/images/` and are **illustrative images**
-  for design quality and layout completeness.
+- Food photos live in `public/images/` (section shots in
+  `public/images/sections/`, per-dish shots in `public/images/menu/`).
+- The **single source of truth** for image assignment is
+  `src/config/images.ts` — a central manifest that maps every printed-menu
+  dish name to a photograph, with category and diet fallbacks so a missing
+  asset can never produce a broken image.
+- Every dish resolves through that manifest; vegetarian dishes never map to
+  meat, fish, seafood or egg photographs (enforced by
+  `scripts/verify-image-manifest.ts`).
+- Run `npx tsx scripts/verify-image-manifest.ts` to audit every reference
+  against the filesystem and regenerate `docs/image-coverage-report.md`.
+- See `docs/image-manifest.md` for the full audit, the generated-asset list
+  and the pending-dish queue.
 - Replace with owner-approved/licensed photos before final public launch.
 
 ## Maintenance notes

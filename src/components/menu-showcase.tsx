@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { getCategoryImage, getMenuAlt, getMenuImage } from "@/config/images";
 
 type MenuItem = {
   name: string;
@@ -27,30 +28,13 @@ type ShowcaseDish = {
 
 type Diet = "veg" | "non-veg";
 
-function resolveDishImage(name: string, category: string, diet: Diet): string {
-  const text = `${name} ${category}`.toLowerCase();
-
-  // Assign the closest available food photograph based on the actual dish
-  // name rather than repeating a single thumbnail for an entire category.
-  if (/fish|prawn|seafood|sea food/.test(text)) return "/images/featured-seafood.jpg";
-  if (/biryani|biriyani/.test(text)) return diet === "veg" ? "/images/gallery-rice.jpg" : "/images/hero-biryani.jpg";
-  if (/noodle/.test(text)) return "/images/featured-noodles.jpg";
-  if (/fried rice|jeera rice|curd rice|rice/.test(text)) return "/images/gallery-rice.jpg";
-  if (/roti|naan|kulcha|chapathi|chapati|paratha|indian bread/.test(text)) return "/images/gallery-bread.jpg";
-  if (/soup/.test(text)) return diet === "veg" ? "/images/featured-veg.jpg" : "/images/featured-starters.jpg";
-  if (/curry|masala|dal |palak|korma|butter|puri/.test(text)) return "/images/gallery-curry.jpg";
-  if (/paneer|panner|gobi|gobili|mushroom|baby.?corn|veg\b|vegetable|dal/.test(text)) return "/images/featured-veg.jpg";
-  if (/tandoori|tikka|kabab|kebab|lollypop|lollipop|drumstick|wings|chicken|mutton|egg/.test(text)) return "/images/featured-starters.jpg";
-  return diet === "veg" ? "/images/featured-veg.jpg" : "/images/featured-starters.jpg";
-}
-
 function DishCard({ dish }: { dish: ShowcaseDish }) {
   return (
     <article className="menu-dish-card">
       <div className="menu-dish-image">
         <Image
           src={dish.image}
-          alt={`Illustrative food image for ${dish.name}`}
+          alt={getMenuAlt(dish.name, dish.category)}
           fill
           sizes="(max-width: 640px) 178px, (max-width: 1024px) 22vw, 238px"
           className="object-cover"
@@ -163,7 +147,18 @@ function DietShowcaseRow({
                 onClick={() => selectCategory("all")}
               >
                 <span className="menu-category-option-image">
-                  <Image src={diet === "veg" ? "/images/featured-veg.jpg" : "/images/featured-starters.jpg"} alt="" fill sizes="56px" />
+                  <Image
+                    src={
+                      availableCategories.length > 0
+                        ? getCategoryImage(availableCategories[0].category)
+                        : diet === "veg"
+                          ? "/images/featured-veg.jpg"
+                          : "/images/featured-starters.jpg"
+                    }
+                    alt=""
+                    fill
+                    sizes="56px"
+                  />
                 </span>
                 <span className="menu-category-option-copy">
                   <span className="menu-category-option-name">All {label} items</span>
@@ -184,7 +179,7 @@ function DietShowcaseRow({
                     onClick={() => selectCategory(category.category)}
                   >
                     <span className="menu-category-option-image">
-                      <Image src={resolveDishImage(category.category, category.category, diet)} alt="" fill sizes="56px" />
+                      <Image src={getCategoryImage(category.category)} alt="" fill sizes="56px" />
                     </span>
                     <span className="menu-category-option-copy">
                       <span className="menu-category-option-name">{category.category}</span>
@@ -230,13 +225,13 @@ export function MenuShowcase({ categories }: { categories: readonly MenuCategory
     const flatten = (diet: Diet) => categories.flatMap((category) =>
       category.items
         .filter((item) => diet === "veg" ? item.diet === "veg" : item.diet !== "veg")
-        .map((item, index) => ({
-          key: `${category.category}-${item.name}-${index}`,
-          name: item.name,
-          price: item.price,
-          category: category.category,
-          image: resolveDishImage(item.name, category.category, diet),
-        })),
+          .map((item, index) => ({
+            key: `${category.category}-${item.name}-${index}`,
+            name: item.name,
+            price: item.price,
+            category: category.category,
+            image: getMenuImage(item.name, category.category, item.diet),
+          })),
     );
     return { veg: flatten("veg"), nonVeg: flatten("non-veg") };
   }, [categories]);

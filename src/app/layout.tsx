@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-biryani.jpg",
-        width: 1200,
-        height: 900,
-        alt: "Illustrative biryani hero image",
+        url: "/images/sections/hero-meal.jpg",
+        width: 1408,
+        height: 768,
+        alt: "Chicken biryani served in a copper handi with raita and naan",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "FULL MOONs Family Restaurant",
     description:
       "Family restaurant in New Gajuwaka, Visakhapatnam. Browse menu categories, contact details and directions.",
-    images: ["/images/hero-biryani.jpg"],
+    images: ["/images/sections/hero-meal.jpg"],
   },
 };
 
