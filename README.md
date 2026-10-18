@@ -86,11 +86,23 @@ Before publishing live, owner should verify:
 7. Owner-approved food and restaurant photography
 8. Final production domain in `NEXT_PUBLIC_SITE_URL`
 
-## Image policy in current build
+## Image system
 
-- Food photos live in `public/images/` and are **illustrative images**
-  for design quality and layout completeness.
-- Replace with owner-approved/licensed photos before final public launch.
+- Food photographs live in `public/images/menu/` (one photograph per
+  dish or per genuinely equivalent dish group), with hero, About and
+  gallery imagery in `public/images/`.
+- `src/config/menu-images.ts` is the central image manifest: it maps
+  every printed-menu dish name to its photograph, defines the
+  category thumbnails used by the menu dropdowns, and curates the
+  photo gallery. All components resolve images through this manifest
+  (`getMenuImage`, `getCategoryImage`, `getMenuImageAlt`).
+- `npm run verify:images` audits the manifest against the menu data
+  and the files on disk (coverage, missing files, orphans, dietary
+  mismatches). `npm run docs:images` regenerates the auditable
+  `docs/IMAGE-MANIFEST.md`.
+- Photographs are realistic restaurant-style shots; replace with
+  owner-approved/licensed photos before final public launch if
+  preferred.
 
 ## Maintenance notes
 
