@@ -1,6 +1,6 @@
 # FULL MOONs — Image Manifest
 
-Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs` from the live menu data. This document is the auditable record of every photograph on the website and the dish it represents.
+Generated on 2026-10-18T02:36:22.392Z by `scripts/build-image-manifest-docs.mjs` from the live menu data. This document is the auditable record of every photograph on the website and the dish it represents.
 
 ## Section imagery
 
@@ -8,10 +8,10 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 |---|---|---|---|
 | Homepage hero | /images/hero-biryani.jpg | Chicken dum biryani served in a copper handi on a restaurant table | ✅ generated |
 | About section | /images/intro-platter.jpg | Assorted Indian dishes arranged on a family restaurant table | ✅ generated |
-| Gallery tile | /images/menu/chicken-dum-biryani.jpg | Chicken dum biryani served in a copper handi | ⏳ pending |
-| Gallery tile | /images/menu/tandoori-chicken.jpg | Tandoori chicken with charred red skin on a plate | ⏳ pending |
-| Gallery tile | /images/menu/prawns-curry.jpg | Prawns curry with visible prawns in masala gravy | ⏳ pending |
-| Gallery tile | /images/menu/paneer-butter-masala.jpg | Paneer cubes in rich butter masala gravy | ⏳ pending |
+| Gallery tile | /images/menu/chicken-dum-biryani.jpg | Chicken dum biryani served in a copper handi | ✅ generated |
+| Gallery tile | /images/menu/tandoori-chicken.jpg | Tandoori chicken with charred red skin on a plate | ✅ generated |
+| Gallery tile | /images/menu/prawns-curry.jpg | Prawns curry with visible prawns in masala gravy | ✅ generated |
+| Gallery tile | /images/menu/paneer-butter-masala.jpg | Paneer cubes in rich butter masala gravy | ✅ generated |
 | Gallery tile | /images/gallery-veg-thali.jpg | Vegetarian thali meal with small bowls on a steel plate | ✅ generated |
 | Gallery tile | /images/gallery-interior.jpg | Restaurant dining room with warm evening ambience | ✅ generated |
 | Gallery tile | /images/gallery-tandoor.jpg | Clay tandoor oven with marinated skewers in the restaurant kitchen | ✅ generated |
@@ -23,11 +23,11 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 | Category | Thumbnail | Status |
 |---|---|---|
 | Veg. Soups | /images/menu/veg-hot-and-sour-soup.jpg | ✅ |
-| Non Veg. Soups | /images/menu/chicken-manchow-soup.jpg | ⏳ pending |
+| Non Veg. Soups | /images/menu/chicken-manchow-soup.jpg | ✅ |
 | Veg. Starters | /images/menu/gobi-manchurian.jpg | ⏳ pending |
 | Spl. Veg. Starters | /images/menu/spl-veg-dry.jpg | ⏳ pending |
-| Non Veg. Starters | /images/menu/chicken-65.jpg | ⏳ pending |
-| Sea Food (Bone Less) | /images/menu/prawns-65.jpg | ⏳ pending |
+| Non Veg. Starters | /images/menu/chicken-65.jpg | ✅ |
+| Sea Food (Bone Less) | /images/menu/prawns-65.jpg | ✅ |
 | Spl. Nonveg Starters | /images/menu/dragon-mutton.jpg | ⏳ pending |
 | Mutton Starters | /images/menu/mutton-fry.jpg | ⏳ pending |
 | Tandoori Non Veg. Starters | /images/gallery-tandoor.jpg | ✅ |
@@ -35,13 +35,13 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 | Spl. Veg. Fried Rice | /images/menu/shezwan-fried-rice.jpg | ⏳ pending |
 | Non Veg. Fried Rice | /images/menu/chicken-fried-rice.jpg | ⏳ pending |
 | Veg. Noodles | /images/menu/veg-noodles.jpg | ⏳ pending |
-| Veg. Curries | /images/menu/paneer-butter-masala.jpg | ⏳ pending |
-| Non Veg. Curries | /images/menu/butter-chicken.jpg | ⏳ pending |
-| Sea Food Curry | /images/menu/prawns-curry.jpg | ⏳ pending |
-| Veg. Biryani's | /images/menu/veg-biryani.jpg | ⏳ pending |
-| Non Veg. Biryani's | /images/menu/chicken-dum-biryani.jpg | ⏳ pending |
+| Veg. Curries | /images/menu/paneer-butter-masala.jpg | ✅ |
+| Non Veg. Curries | /images/menu/butter-chicken.jpg | ✅ |
+| Sea Food Curry | /images/menu/prawns-curry.jpg | ✅ |
+| Veg. Biryani's | /images/menu/veg-biryani.jpg | ✅ |
+| Non Veg. Biryani's | /images/menu/chicken-dum-biryani.jpg | ✅ |
 | Spl. Biryani's | /images/menu/full-moon-biryani.jpg | ⏳ pending |
-| Mutton Curry | /images/menu/mutton-curry.jpg | ⏳ pending |
+| Mutton Curry | /images/menu/mutton-curry.jpg | ✅ |
 | Roti | /images/menu/tandoori-roti.jpg | ⏳ pending |
 | Special Biryani Offers | /images/menu/spl-mix-biryani.jpg | ⏳ pending |
 
@@ -63,7 +63,7 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
 | Chicken Sweet Corn Soup | non-veg | ₹139 | `chicken-sweet-corn-soup.jpg` | ⏳ pending |
-| Chicken Manchow Soup | non-veg | ₹139 | `chicken-manchow-soup.jpg` | ⏳ pending |
+| Chicken Manchow Soup | non-veg | ₹139 | `chicken-manchow-soup.jpg` | ✅ |
 | Chicken Hot and Sour Soup | non-veg | ₹139 | `chicken-hot-and-sour-soup.jpg` | ⏳ pending |
 | Chicken Clear Soup | non-veg | ₹139 | `chicken-clear-soup.jpg` (shared group) | ⏳ pending |
 | Chicken Lemon Coriander Soup | non-veg | ₹139 | `chicken-clear-soup.jpg` (shared group) | ⏳ pending |
@@ -105,14 +105,14 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 |---|---|---|---|---|
 | Chicken Manchurian | non-veg | ₹260 | `chicken-manchurian.jpg` (shared group) | ⏳ pending |
 | Chilli Chicken | non-veg | ₹260 | `chilli-chicken.jpg` (shared group) | ⏳ pending |
-| Chicken 65 | non-veg | ₹260 | `chicken-65.jpg` (shared group) | ⏳ pending |
+| Chicken 65 | non-veg | ₹260 | `chicken-65.jpg` (shared group) | ✅ |
 | Pepper Chicken | non-veg | ₹270 | `pepper-chicken.jpg` (shared group) | ⏳ pending |
 | Chicken Majestic | non-veg | ₹300 | `chicken-majestic.jpg` (shared group) | ⏳ pending |
 | Sezwan Chicken Dry | non-veg | ₹300 | `chilli-chicken.jpg` (shared group) | ⏳ pending |
 | Lemon Chicken Dry | non-veg | ₹260 | `pepper-chicken.jpg` (shared group) | ⏳ pending |
 | Dragon Chicken | non-veg | ₹300 | `chicken-manchurian.jpg` (shared group) | ⏳ pending |
-| Chicken 555 | non-veg | ₹300 | `chicken-65.jpg` (shared group) | ⏳ pending |
-| Apollo Chicken | non-veg | ₹290 | `chicken-65.jpg` (shared group) | ⏳ pending |
+| Chicken 555 | non-veg | ₹300 | `chicken-65.jpg` (shared group) | ✅ |
+| Apollo Chicken | non-veg | ₹290 | `chicken-65.jpg` (shared group) | ✅ |
 | Kaju Chicken Dry | non-veg | ₹310 | `kaju-chicken.jpg` | ⏳ pending |
 | Hongkong Chicken | non-veg | ₹300 | `chicken-manchurian.jpg` (shared group) | ⏳ pending |
 | (Spl) Fullmoon Chicken (Spl) | non-veg | ₹370 | `chicken-majestic.jpg` (shared group) | ⏳ pending |
@@ -133,9 +133,9 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 | Chilli Fish | non-veg | ₹300 | `chilli-fish.jpg` (shared group) | ⏳ pending |
 | Garlic Fish | non-veg | ₹300 | `chilli-fish.jpg` (shared group) | ⏳ pending |
 | Fish Manchurian | non-veg | ₹300 | `fish-65.jpg` (shared group) | ⏳ pending |
-| Prawns 65 | non-veg | ₹320 | `prawns-65.jpg` (shared group) | ⏳ pending |
-| Prawns Manchurian | non-veg | ₹320 | `prawns-65.jpg` (shared group) | ⏳ pending |
-| Prawns Chilli | non-veg | ₹320 | `prawns-65.jpg` (shared group) | ⏳ pending |
+| Prawns 65 | non-veg | ₹320 | `prawns-65.jpg` (shared group) | ✅ |
+| Prawns Manchurian | non-veg | ₹320 | `prawns-65.jpg` (shared group) | ✅ |
+| Prawns Chilli | non-veg | ₹320 | `prawns-65.jpg` (shared group) | ✅ |
 | Loose Prawns | non-veg | ₹320 | `loose-prawns.jpg` (shared group) | ⏳ pending |
 | Garlic Prawns | non-veg | ₹320 | `loose-prawns.jpg` (shared group) | ⏳ pending |
 
@@ -143,10 +143,10 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
-| Chicken 77 | non-veg | ₹370 | `chicken-65.jpg` (shared group) | ⏳ pending |
+| Chicken 77 | non-veg | ₹370 | `chicken-65.jpg` (shared group) | ✅ |
 | Korean Chilli Wings | non-veg | ₹370 | `chicken-fried-wings.jpg` (shared group) | ⏳ pending |
 | Mangolean Chicken | non-veg | ₹370 | `chilli-chicken.jpg` (shared group) | ⏳ pending |
-| ODC Chicken | non-veg | ₹370 | `chicken-65.jpg` (shared group) | ⏳ pending |
+| ODC Chicken | non-veg | ₹370 | `chicken-65.jpg` (shared group) | ✅ |
 | Red Pepper Chicken | non-veg | ₹370 | `pepper-chicken.jpg` (shared group) | ⏳ pending |
 | Dragon Mutton | non-veg | ₹370 | `dragon-mutton.jpg` | ⏳ pending |
 | Cripsy Fried Prawns | non-veg | ₹370 | `loose-prawns.jpg` (shared group) | ⏳ pending |
@@ -168,8 +168,8 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
-| Tandoori Chicken (Full) | non-veg | ₹540 | `tandoori-chicken.jpg` (shared group) | ⏳ pending |
-| Tandoori Chicken (Half) | non-veg | ₹315 | `tandoori-chicken.jpg` (shared group) | ⏳ pending |
+| Tandoori Chicken (Full) | non-veg | ₹540 | `tandoori-chicken.jpg` (shared group) | ✅ |
+| Tandoori Chicken (Half) | non-veg | ₹315 | `tandoori-chicken.jpg` (shared group) | ✅ |
 | Kalmi Kabab | non-veg | ₹340 | `kalmi-kabab.jpg` | ⏳ pending |
 | Chicken Tikka | non-veg | ₹340 | `chicken-tikka.jpg` (shared group) | ⏳ pending |
 | Malai Tikka | non-veg | ₹340 | `chicken-tikka.jpg` (shared group) | ⏳ pending |
@@ -226,8 +226,8 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 | Dal Tadka | veg | ₹190 | `dal-fry.jpg` (shared group) | ⏳ pending |
 | Palak Panner | veg | ₹270 | `palak-paneer.jpg` | ⏳ pending |
 | Mushroom Curry | veg | ₹250 | `mix-veg-curry.jpg` (shared group) | ⏳ pending |
-| Panner Butter Masala | veg | ₹240 | `paneer-butter-masala.jpg` (shared group) | ⏳ pending |
-| PannerCheat Pata | veg | ₹270 | `paneer-butter-masala.jpg` (shared group) | ⏳ pending |
+| Panner Butter Masala | veg | ₹240 | `paneer-butter-masala.jpg` (shared group) | ✅ |
+| PannerCheat Pata | veg | ₹270 | `paneer-butter-masala.jpg` (shared group) | ✅ |
 | Kaju Tomato Curry | veg | ₹300 | `kaju-tomato-curry.jpg` (shared group) | ⏳ pending |
 | Kaju Panner | veg | ₹300 | `kaju-tomato-curry.jpg` (shared group) | ⏳ pending |
 | Kadai Panner | veg | ₹300 | `kadai-paneer.jpg` | ⏳ pending |
@@ -245,9 +245,9 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 | Panjabi Chicken Curry | non-veg | ₹310 | `chicken-curry.jpg` (shared group) | ⏳ pending |
 | Dillkush Chicken Curry | non-veg | ₹310 | `chicken-curry.jpg` (shared group) | ⏳ pending |
 | Afgani Chicken Curry | non-veg | ₹310 | `kadai-chicken.jpg` (shared group) | ⏳ pending |
-| Chicken Tikka Masala Curry | non-veg | ₹310 | `butter-chicken.jpg` (shared group) | ⏳ pending |
-| Butter Chicken Curry | non-veg | ₹310 | `butter-chicken.jpg` (shared group) | ⏳ pending |
-| Moghalai Chicken Curry | non-veg | ₹310 | `butter-chicken.jpg` (shared group) | ⏳ pending |
+| Chicken Tikka Masala Curry | non-veg | ₹310 | `butter-chicken.jpg` (shared group) | ✅ |
+| Butter Chicken Curry | non-veg | ₹310 | `butter-chicken.jpg` (shared group) | ✅ |
+| Moghalai Chicken Curry | non-veg | ₹310 | `butter-chicken.jpg` (shared group) | ✅ |
 | Methi Chicken Curry | non-veg | ₹310 | `kadai-chicken.jpg` (shared group) | ⏳ pending |
 | Egg Bujji | egg | ₹150 | `egg-curry.jpg` (shared group) | ⏳ pending |
 | Egg Masala | egg | ₹180 | `egg-curry.jpg` (shared group) | ⏳ pending |
@@ -256,8 +256,8 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
-| Prawns Curry | non-veg | ₹290 | `prawns-curry.jpg` (shared group) | ⏳ pending |
-| Prawns Masala Curry | non-veg | ₹300 | `prawns-curry.jpg` (shared group) | ⏳ pending |
+| Prawns Curry | non-veg | ₹290 | `prawns-curry.jpg` (shared group) | ✅ |
+| Prawns Masala Curry | non-veg | ₹300 | `prawns-curry.jpg` (shared group) | ✅ |
 | Fish Curry | non-veg | ₹280 | `fish-curry.jpg` (shared group) | ⏳ pending |
 | Fish Masala Curry | non-veg | ₹290 | `fish-curry.jpg` (shared group) | ⏳ pending |
 
@@ -266,8 +266,8 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
 | Kaju Biryani | veg | ₹220 | `kaju-biryani.jpg` | ⏳ pending |
-| Veg Biryani | veg | ₹200 | `veg-biryani.jpg` (shared group) | ⏳ pending |
-| Ulavacharu Biryani Veg. | veg | ₹210 | `veg-biryani.jpg` (shared group) | ⏳ pending |
+| Veg Biryani | veg | ₹200 | `veg-biryani.jpg` (shared group) | ✅ |
+| Ulavacharu Biryani Veg. | veg | ₹210 | `veg-biryani.jpg` (shared group) | ✅ |
 | Mushroom Biryani | veg | ₹210 | `mushroom-biryani.jpg` | ⏳ pending |
 | Panner Biryani | veg | ₹210 | `paneer-biryani.jpg` | ⏳ pending |
 
@@ -275,7 +275,7 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
-| Dum Biryani | non-veg | ₹240 | `chicken-dum-biryani.jpg` (shared group) | ⏳ pending |
+| Dum Biryani | non-veg | ₹240 | `chicken-dum-biryani.jpg` (shared group) | ✅ |
 | Chicken Fry Pieces Biryani (Mini) | non-veg | ₹170 | `chicken-fry-pieces-biryani.jpg` (shared group) | ⏳ pending |
 | Chicken Fry Pieces Biryani | non-veg | ₹250 | `chicken-fry-pieces-biryani.jpg` (shared group) | ⏳ pending |
 | Fish Biryani | non-veg | ₹270 | `fish-biryani.jpg` | ⏳ pending |
@@ -290,18 +290,18 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 | Full Moon Biryani (Spl) | non-veg | ₹499 | `full-moon-biryani.jpg` | ⏳ pending |
 | Chicken Lollypop Biryani (4Pcs) | non-veg | ₹370 | `chicken-fry-pieces-biryani.jpg` (shared group) | ⏳ pending |
 | Chicken Wings Biryani (4Pcs) | non-veg | ₹370 | `chicken-fry-pieces-biryani.jpg` (shared group) | ⏳ pending |
-| Chicken Mogalai Biryani (Boneless) | non-veg | ₹370 | `chicken-dum-biryani.jpg` (shared group) | ⏳ pending |
+| Chicken Mogalai Biryani (Boneless) | non-veg | ₹370 | `chicken-dum-biryani.jpg` (shared group) | ✅ |
 | Spl. Mix Biryani | non-veg | ₹420 | `spl-mix-biryani.jpg` (shared group) | ⏳ pending |
 | Kalmi Biryani | non-veg | ₹370 | `chicken-fry-pieces-biryani.jpg` (shared group) | ⏳ pending |
 | Chicken Gongura Biryani | non-veg | ₹320 | `gongura-chicken-biryani.jpg` | ⏳ pending |
 | Mutton Gongura Biryani | non-veg | ₹440 | `mutton-biryani.jpg` (shared group) | ⏳ pending |
-| Ulavacharu Chicken Biryani | non-veg | ₹320 | `chicken-dum-biryani.jpg` (shared group) | ⏳ pending |
+| Ulavacharu Chicken Biryani | non-veg | ₹320 | `chicken-dum-biryani.jpg` (shared group) | ✅ |
 | Ulavacharu Mutton Biryani | non-veg | ₹450 | `mutton-biryani.jpg` (shared group) | ⏳ pending |
 | Palamuri Biryani | non-veg | ₹280 | `chicken-fry-pieces-biryani.jpg` (shared group) | ⏳ pending |
 | Rambo Biryani | non-veg | ₹419 | `spl-mix-biryani.jpg` (shared group) | ⏳ pending |
-| Shai Murg | non-veg | ₹470 | `chicken-dum-biryani.jpg` (shared group) | ⏳ pending |
+| Shai Murg | non-veg | ₹470 | `chicken-dum-biryani.jpg` (shared group) | ✅ |
 | Shai Gous (Mutton) | non-veg | ₹520 | `mutton-biryani.jpg` (shared group) | ⏳ pending |
-| Tandoori Biryani | non-veg | ₹370 | `chicken-dum-biryani.jpg` (shared group) | ⏳ pending |
+| Tandoori Biryani | non-veg | ₹370 | `chicken-dum-biryani.jpg` (shared group) | ✅ |
 
 ### Mutton Curry
 
@@ -309,11 +309,11 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 |---|---|---|---|---|
 | Kadai Mutton Curry | non-veg | ₹390 | `kadai-mutton.jpg` (shared group) | ⏳ pending |
 | Gongura Mutton Curry | non-veg | ₹390 | `gongura-mutton.jpg` | ⏳ pending |
-| Mutton Curry | non-veg | ₹390 | `mutton-curry.jpg` (shared group) | ⏳ pending |
-| Andhra Mutton Curry | non-veg | ₹390 | `mutton-curry.jpg` (shared group) | ⏳ pending |
-| Mutton Miriyalu Curry | non-veg | ₹390 | `mutton-curry.jpg` (shared group) | ⏳ pending |
+| Mutton Curry | non-veg | ₹390 | `mutton-curry.jpg` (shared group) | ✅ |
+| Andhra Mutton Curry | non-veg | ₹390 | `mutton-curry.jpg` (shared group) | ✅ |
+| Mutton Miriyalu Curry | non-veg | ₹390 | `mutton-curry.jpg` (shared group) | ✅ |
 | Mutton Rogan Juice Curry | non-veg | ₹390 | `kadai-mutton.jpg` (shared group) | ⏳ pending |
-| Mutton Sahi Curry | non-veg | ₹390 | `mutton-curry.jpg` (shared group) | ⏳ pending |
+| Mutton Sahi Curry | non-veg | ₹390 | `mutton-curry.jpg` (shared group) | ✅ |
 
 ### Roti
 
@@ -334,11 +334,11 @@ Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs`
 
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
-| Family Pack — Dum Biryani (4 Dum Pie + Chicken 65, 3 Eggs, Soft Drink) | non-veg | ₹649 | `chicken-dum-biryani.jpg` (shared group) | ⏳ pending |
+| Family Pack — Dum Biryani (4 Dum Pie + Chicken 65, 3 Eggs, Soft Drink) | non-veg | ₹649 | `chicken-dum-biryani.jpg` (shared group) | ✅ |
 | Family Pack — Fry Biryani (Fry Pie + Chicken 65, 3 Eggs, Soft Drink) | non-veg | ₹749 | `chicken-fry-pieces-biryani.jpg` (shared group) | ⏳ pending |
 | Party Pack — Chicken Fry Biryani, Chicken 65, 2 Mocktails or 500ml Soft Drink | non-veg | ₹1399 | `spl-mix-biryani.jpg` (shared group) | ⏳ pending |
 | Spl. Biryani — Palamuru Biryani | non-veg | ₹280 | `chicken-fry-pieces-biryani.jpg` (shared group) | ⏳ pending |
-| Spl. Biryani — Nababe Biryani | non-veg | ₹370 | `chicken-dum-biryani.jpg` (shared group) | ⏳ pending |
+| Spl. Biryani — Nababe Biryani | non-veg | ₹370 | `chicken-dum-biryani.jpg` (shared group) | ✅ |
 | Spl. Biryani — Rambo Biryani (3 leg piece) | non-veg | ₹419 | `spl-mix-biryani.jpg` (shared group) | ⏳ pending |
 
 ## Shared photograph groups
@@ -395,4 +395,4 @@ These dishes are genuinely equivalent presentations of the same preparation, so 
 - Menu dishes: **184**
 - Dishes with a manifest mapping: **184**
 - Distinct dish photographs: **92**
-- Photographs still to generate: **179**
+- Photographs still to generate: **148**
