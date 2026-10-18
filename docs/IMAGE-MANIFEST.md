@@ -1,6 +1,6 @@
 # FULL MOONs — Image Manifest
 
-Generated on 2026-10-18T01:53:18.775Z by `scripts/build-image-manifest-docs.mjs` from the live menu data. This document is the auditable record of every photograph on the website and the dish it represents.
+Generated on 2026-10-18T01:59:06.858Z by `scripts/build-image-manifest-docs.mjs` from the live menu data. This document is the auditable record of every photograph on the website and the dish it represents.
 
 ## Section imagery
 
@@ -14,6 +14,7 @@ Generated on 2026-10-18T01:53:18.775Z by `scripts/build-image-manifest-docs.mjs`
 | Gallery tile | /images/menu/paneer-butter-masala.jpg | Paneer cubes in rich butter masala gravy | ⏳ pending |
 | Gallery tile | /images/gallery-veg-thali.jpg | Vegetarian thali meal with small bowls on a steel plate | ✅ generated |
 | Gallery tile | /images/gallery-interior.jpg | Restaurant dining room with warm evening ambience | ✅ generated |
+| Gallery tile | /images/gallery-tandoor.jpg | Clay tandoor oven with marinated skewers in the restaurant kitchen | ✅ generated |
 
 > While a photograph is pending generation, the affected dish card shows the closest existing photograph from the same category (see `src/config/menu-image-availability.ts`), so no dish card is ever broken or misrepresented as a different dish.
 

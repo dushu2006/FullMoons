@@ -45,8 +45,10 @@ dietary tags were left untouched throughout this work.
   section photos to 1280px/q82 (dish cards display at ~238px).
 - Component integration: `menu-showcase.tsx` (dish cards + dropdown thumbnails +
   alt text), `page.tsx` (hero, About, gallery now uses the existing
-  `GalleryLightbox` component with six curated, distinct photographs),
-  `site.ts` (category thumbnails), `layout.tsx` (OG alt text). The marquee
+  `GalleryLightbox` component with a curated set of distinct photographs —
+  biryani, tandoori chicken, prawns curry, paneer butter masala, veg soup,
+  thali, ambience and tandoor-oven shots), `site.ts` (category thumbnails),
+  `layout.tsx` (OG alt text). The marquee
   animation, category selection, pause behaviour, prices and responsive layout
   are unchanged.
 

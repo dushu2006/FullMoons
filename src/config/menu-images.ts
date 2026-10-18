@@ -521,6 +521,10 @@ export const galleryImages = [
     src: "/images/gallery-interior.jpg",
     alt: "Restaurant dining room with warm evening ambience",
   },
+  {
+    src: "/images/gallery-tandoor.jpg",
+    alt: "Clay tandoor oven with marinated skewers in the restaurant kitchen",
+  },
 ] as const;
 
 /**
