@@ -142,63 +142,82 @@ export default function HomePage() {
         <section id="gallery" className="section-space border-y border-[var(--color-border-dark)] bg-[var(--color-bg-secondary)]">
           <div className="site-container">
             <SectionHeading
-              eyebrow="Photo Gallery"
-              title="A closer look at the menu"
-              description="Explore a visual selection of dishes and menu categories. Images are illustrative previews; please confirm specific dishes and presentation with the restaurant."
+              eyebrow="Inside FULL MOONs"
+              title="A place to sit back, share a meal, and enjoy"
+              description="Take a look inside our dining space, from the window-side seats to the wider family dining area. We look forward to welcoming you."
             />
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-12">
-              <figure className="gallery-tile scroll-reveal scroll-interactive col-span-2 overflow-hidden border border-[var(--color-border-dark)] sm:col-span-1 lg:col-span-7">
-                <div className="relative aspect-[5/4] overflow-hidden sm:aspect-[4/5] lg:aspect-[5/3]">
-                  <Image src="/images/hero-biryani.jpg" alt="Illustrative biryani presentation" fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 58vw" className="gallery-image object-cover" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5">
+              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] sm:col-span-2 lg:col-span-7" data-reveal="left">
+                <div className="relative aspect-[5/4] overflow-hidden sm:aspect-[16/9]">
+                  <Image
+                    src="/images/restaurant/ChatGPT%20Image%20Oct%2018%2C%202026%2C%2008_17_25%20AM.jpg"
+                    alt="Window-side seating at FULL MOONs with red chairs and warm wooden ceiling"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 58vw"
+                    className="gallery-image object-cover transition-transform duration-500 hover:scale-[1.025]"
+                    loading="lazy"
+                  />
                 </div>
-                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Biryani favourites</span><p className="mt-1 font-heading text-lg sm:text-xl">A hearty centrepiece</p></figcaption>
+                <figcaption className="p-4 sm:p-5">
+                  <span className="eyebrow text-[var(--color-accent)]">Window-side seating</span>
+                  <p className="mt-1 font-heading text-xl sm:text-2xl">A relaxed corner for your meal</p>
+                </figcaption>
               </figure>
-              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-5">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image src="/images/featured-starters.jpg" alt="Illustrative Indian starter dishes" fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 42vw" className="gallery-image object-cover" />
+
+              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-5" data-reveal="right">
+                <div className="relative aspect-[4/3] overflow-hidden lg:aspect-[5/4]">
+                  <Image
+                    src="/images/restaurant/Bustling%20Indian%20Restaurant%20Dining%20Room-3.png"
+                    alt="Guests enjoying a meal in an Indian family restaurant dining room"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 42vw"
+                    className="gallery-image object-cover transition-transform duration-500 hover:scale-[1.025]"
+                    loading="lazy"
+                  />
                 </div>
-                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Starters</span><p className="mt-1 font-heading text-lg sm:text-xl">Something to share</p></figcaption>
+                <figcaption className="p-4">
+                  <span className="eyebrow text-[var(--color-accent)]">Family dining</span>
+                  <p className="mt-1 font-heading text-xl">Good food, shared together</p>
+                </figcaption>
               </figure>
-              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
+
+              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-5" data-reveal="left">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image src="/images/featured-veg.jpg" alt="Illustrative vegetarian dishes" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
+                  <Image
+                    src="/images/restaurant/Bustling%20South%20Asian%20Restaurant%20Evening-1.png"
+                    alt="Warm evening ambience inside a South Asian restaurant"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 42vw"
+                    className="gallery-image object-cover transition-transform duration-500 hover:scale-[1.025]"
+                    loading="lazy"
+                  />
                 </div>
-                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Vegetarian</span><p className="mt-1 font-heading text-lg sm:text-xl">Vegetarian choices</p></figcaption>
+                <figcaption className="p-4">
+                  <span className="eyebrow text-[var(--color-accent)]">Warm ambience</span>
+                  <p className="mt-1 font-heading text-xl">Make time for a comfortable meal</p>
+                </figcaption>
               </figure>
-              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image src="/images/gallery-curry.jpg" alt="Illustrative curry dish" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
+
+              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-7" data-reveal="right">
+                <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/9]">
+                  <Image
+                    src="/images/restaurant/Lively%20Family%20Dining%20at%20a%20Festive%20Restaurant-2.png"
+                    alt="Indian families and friends sharing food in a lively dining space"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 58vw"
+                    className="gallery-image object-cover transition-transform duration-500 hover:scale-[1.025]"
+                    loading="lazy"
+                  />
                 </div>
-                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Curries</span><p className="mt-1 font-heading text-lg sm:text-xl">Rich, comforting flavours</p></figcaption>
-              </figure>
-              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image src="/images/featured-noodles.jpg" alt="Illustrative rice and noodle dishes" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
-                </div>
-                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Rice & noodles</span><p className="mt-1 font-heading text-lg sm:text-xl">Everyday favourites</p></figcaption>
-              </figure>
-              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image src="/images/featured-starters.jpg" alt="Illustrative crispy starter selection" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
-                </div>
-                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Crispy starters</span><p className="mt-1 font-heading text-lg sm:text-xl">Small plates to begin</p></figcaption>
-              </figure>
-              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image src="/images/gallery-curry.jpg" alt="Illustrative Indian curry selection" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
-                </div>
-                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Main course</span><p className="mt-1 font-heading text-lg sm:text-xl">Curries for the table</p></figcaption>
-              </figure>
-              <figure className="gallery-tile scroll-reveal scroll-interactive overflow-hidden border border-[var(--color-border-dark)] lg:col-span-4">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image src="/images/featured-veg.jpg" alt="Illustrative Indian vegetarian meal" fill sizes="(max-width: 640px) 50vw, 33vw" className="gallery-image object-cover" />
-                </div>
-                <figcaption className="p-3 sm:p-4"><span className="eyebrow text-[var(--color-accent)]">Meal ideas</span><p className="mt-1 font-heading text-lg sm:text-xl">Build your own spread</p></figcaption>
+                <figcaption className="p-4 sm:p-5">
+                  <span className="eyebrow text-[var(--color-accent)]">Time together</span>
+                  <p className="mt-1 font-heading text-xl sm:text-2xl">Bring your favourite people along</p>
+                </figcaption>
               </figure>
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="#menu" className="btn btn-primary">Explore Full Menu</Link>
-              <ActionLink href={siteConfig.links.swiggyListing} className="btn border-transparent bg-[#FC8019] text-white hover:bg-[#e66f0e]">Order on Swiggy</ActionLink>
+              <DirectionsLink className="btn btn-secondary">Plan Your Visit</DirectionsLink>
             </div>
           </div>
         </section>
