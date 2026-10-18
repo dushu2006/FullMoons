@@ -1,6 +1,6 @@
 # FULL MOONs — Image Manifest
 
-Generated on 2026-10-18T03:24:21.086Z by `scripts/build-image-manifest-docs.mjs` from the live menu data. This document is the auditable record of every photograph on the website and the dish it represents.
+Generated on 2026-10-18T03:36:05.808Z by `scripts/build-image-manifest-docs.mjs` from the live menu data. This document is the auditable record of every photograph on the website and the dish it represents.
 
 ## Section imagery
 
@@ -24,8 +24,8 @@ Generated on 2026-10-18T03:24:21.086Z by `scripts/build-image-manifest-docs.mjs`
 |---|---|---|
 | Veg. Soups | /images/menu/veg-hot-and-sour-soup.jpg | ✅ |
 | Non Veg. Soups | /images/menu/chicken-manchow-soup.jpg | ✅ |
-| Veg. Starters | /images/menu/gobi-manchurian.jpg | ⏳ pending |
-| Spl. Veg. Starters | /images/menu/spl-veg-dry.jpg | ⏳ pending |
+| Veg. Starters | /images/menu/gobi-manchurian.jpg | ✅ |
+| Spl. Veg. Starters | /images/menu/spl-veg-dry.jpg | ✅ |
 | Non Veg. Starters | /images/menu/chicken-65.jpg | ✅ |
 | Sea Food (Bone Less) | /images/menu/prawns-65.jpg | ✅ |
 | Spl. Nonveg Starters | /images/menu/dragon-mutton.jpg | ⏳ pending |
@@ -77,27 +77,27 @@ Generated on 2026-10-18T03:24:21.086Z by `scripts/build-image-manifest-docs.mjs`
 
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
-| Veg Gobili Chilli Dry and Wet | veg | ₹239 | `gobili-chilli.jpg` | ⏳ pending |
-| Gobi Manchurian Dry & Wet | veg | ₹239 | `gobi-manchurian.jpg` | ⏳ pending |
-| Mushroom 65 | veg | ₹239 | `mushroom-65.jpg` (shared group) | ⏳ pending |
-| Chilli Mushroom | veg | ₹250 | `mushroom-65.jpg` (shared group) | ⏳ pending |
-| Chilli Babycorn | veg | ₹250 | `chilli-babycorn.jpg` (shared group) | ⏳ pending |
-| Crispy Baby Corn | veg | ₹250 | `chilli-babycorn.jpg` (shared group) | ⏳ pending |
-| Panner 65 | veg | ₹260 | `paneer-65.jpg` (shared group) | ⏳ pending |
-| Panner Chilli | veg | ₹260 | `paneer-chilli.jpg` (shared group) | ⏳ pending |
-| Sezwan Panner | veg | ₹260 | `paneer-chilli.jpg` (shared group) | ⏳ pending |
-| Sezwan Mushroom Dry | veg | ₹260 | `mushroom-65.jpg` (shared group) | ⏳ pending |
-| Panner Majestic Dry | veg | ₹260 | `paneer-65.jpg` (shared group) | ⏳ pending |
-| French Fries | veg | ₹140 | `french-fries.jpg` | ⏳ pending |
+| Veg Gobili Chilli Dry and Wet | veg | ₹239 | `gobili-chilli.jpg` | ✅ |
+| Gobi Manchurian Dry & Wet | veg | ₹239 | `gobi-manchurian.jpg` | ✅ |
+| Mushroom 65 | veg | ₹239 | `mushroom-65.jpg` (shared group) | ✅ |
+| Chilli Mushroom | veg | ₹250 | `mushroom-65.jpg` (shared group) | ✅ |
+| Chilli Babycorn | veg | ₹250 | `chilli-babycorn.jpg` (shared group) | ✅ |
+| Crispy Baby Corn | veg | ₹250 | `chilli-babycorn.jpg` (shared group) | ✅ |
+| Panner 65 | veg | ₹260 | `paneer-65.jpg` (shared group) | ✅ |
+| Panner Chilli | veg | ₹260 | `paneer-chilli.jpg` (shared group) | ✅ |
+| Sezwan Panner | veg | ₹260 | `paneer-chilli.jpg` (shared group) | ✅ |
+| Sezwan Mushroom Dry | veg | ₹260 | `mushroom-65.jpg` (shared group) | ✅ |
+| Panner Majestic Dry | veg | ₹260 | `paneer-65.jpg` (shared group) | ✅ |
+| French Fries | veg | ₹140 | `french-fries.jpg` | ✅ |
 
 ### Spl. Veg. Starters
 
 | Dish | Diet | Price | Photograph | Status |
 |---|---|---|---|---|
-| Spl. Veg Dry | veg | ₹280 | `spl-veg-dry.jpg` | ⏳ pending |
-| Shahi Veg Dry | veg | ₹280 | `shahi-veg-dry.jpg` | ⏳ pending |
-| Dragon Panner | veg | ₹320 | `paneer-chilli.jpg` (shared group) | ⏳ pending |
-| Spl. Panner Tikka | veg | ₹370 | `paneer-tikka.jpg` | ⏳ pending |
+| Spl. Veg Dry | veg | ₹280 | `spl-veg-dry.jpg` | ✅ |
+| Shahi Veg Dry | veg | ₹280 | `shahi-veg-dry.jpg` | ✅ |
+| Dragon Panner | veg | ₹320 | `paneer-chilli.jpg` (shared group) | ✅ |
+| Spl. Panner Tikka | veg | ₹370 | `paneer-tikka.jpg` | ✅ |
 
 ### Non Veg. Starters
 
@@ -395,4 +395,4 @@ These dishes are genuinely equivalent presentations of the same preparation, so 
 - Menu dishes: **184**
 - Dishes with a manifest mapping: **184**
 - Distinct dish photographs: **92**
-- Photographs still to generate: **136**
+- Photographs still to generate: **120**
