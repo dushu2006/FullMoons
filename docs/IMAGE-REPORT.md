@@ -52,7 +52,7 @@ dietary tags were left untouched throughout this work.
   animation, category selection, pause behaviour, prices and responsive layout
   are unchanged.
 
-## 3. Photographs generated this session (10)
+## 3. Photographs generated (20 so far, in batches of 10)
 
 | File | Subject |
 |---|---|
@@ -66,29 +66,31 @@ dietary tags were left untouched throughout this work.
 | `public/images/menu/veg-manchow-soup.jpg` | Veg manchow soup |
 | `public/images/menu/veg-garlic-soup.jpg` | Veg garlic soup |
 | `public/images/menu/veg-lemon-coriander-soup.jpg` | Lemon coriander soup |
+| `public/images/menu/chicken-dum-biryani.jpg` | Chicken dum biryani in a copper handi |
+| `public/images/menu/tandoori-chicken.jpg` | Tandoori chicken |
+| `public/images/menu/prawns-curry.jpg` | Prawns curry |
+| `public/images/menu/paneer-butter-masala.jpg` | Paneer butter masala |
+| `public/images/menu/veg-biryani.jpg` | Vegetable biryani |
+| `public/images/menu/butter-chicken.jpg` | Butter chicken |
+| `public/images/menu/chicken-65.jpg` | Chicken 65 |
+| `public/images/menu/prawns-65.jpg` | Prawns 65 |
+| `public/images/menu/mutton-curry.jpg` | Mutton curry |
+| `public/images/menu/spl-mix-biryani.jpg` | Special mix biryani |
 
-All five veg-soup dishes now show their own dedicated photographs; hero, About
-and category thumbnails for Veg. Soups and Tandoori starters are live.
+All five veg-soup dishes now show their own dedicated photographs. The
+gallery is fully live with seven distinct photographs, and 21 of 22
+category thumbnails use their dedicated representative dish photo.
 
-## 4. Remaining limitation — 87 photographs pending
+## 4. Remaining limitation — 77 photographs pending
 
-**The image-generation tool enforced a hard limit of 10 generated images for
-this session.** Every subsequent attempt (retried across several hours, including
-after long waits) returned: *"Image generation limit of 10 reached for this
-turn."* The remaining 87 photographs listed dish-by-dish in
-`docs/IMAGE-MANIFEST.md` (⏳ pending) could therefore not be created in this
-session. Web image search was evaluated as an alternative but rejected: results
-are low-resolution, watermarked stock previews that cannot be visually verified
-in this environment and would violate the "no stock-photo catalogue, no
-watermarks" visual direction.
-
-Until each pending photo is generated, the affected dish cards show the closest
-honest existing photograph from the same category (documented in
-`src/config/menu-image-availability.ts` and marked ⏳ in the manifest doc).
-**To finish the photo set:** run the generation workflow in batches (the
-prompts/subjects for every pending slug are listed in `docs/IMAGE-MANIFEST.md`),
-then `npm run sync:images && npm run docs:images`. No code changes are needed —
-the manifest already maps every dish.
+**The image-generation tool allows 10 photographs per user turn.** The
+remaining 77 photographs (listed dish-by-dish with ⏳ in
+`docs/IMAGE-MANIFEST.md`) are generated in batches of 10; after each
+batch, `npm run sync:images` and `npm run docs:images` activate the new
+photographs on the site with no code changes. Web image search was
+evaluated and rejected: results are low-resolution, watermarked stock
+previews that cannot be visually verified in this environment and would
+violate the "no stock-photo catalogue, no watermarks" visual direction.
 
 ## 5. Checks performed
 
