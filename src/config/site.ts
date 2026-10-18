@@ -48,8 +48,8 @@ export const siteConfig = {
     description:
       "Explore a selection of biryanis, Indian favourites and more at FULL MOONs Family Restaurant.",
     image: {
-      src: "/images/hero-biryani.jpg",
-      alt: "Illustrative biryani dish served in a traditional vessel",
+      src: "/images/sections/hero-meal.jpg",
+      alt: "Chicken biryani served in a copper handi with raita, tandoori chicken and naan on a restaurant table",
     },
   },
   intro: {
@@ -58,15 +58,15 @@ export const siteConfig = {
     description:
       "FULL MOONs Family Restaurant is publicly listed in New Gajuwaka, Visakhapatnam, with menu categories that include biryanis, chicken and mutton dishes, seafood, vegetarian options, starters, curries, rice, noodles, soups and Indian breads.",
     image: {
-      src: "/images/intro-platter.jpg",
-      alt: "Illustrative assortment of Indian dishes arranged on a table",
+      src: "/images/sections/about-spread.jpg",
+      alt: "Assortment of vegetarian Indian dishes served family-style on a restaurant table",
     },
   },
   // Transcribed from the restaurant's printed menu screenshots supplied for this update.
   // Prices are shown in INR and should be kept aligned with the physical menu.
   menuOverview: [
     {
-      category: "Veg. Soups", image: "/images/featured-veg.jpg", notes: "Printed menu selection",
+      category: "Veg. Soups", image: "/images/menu/veg-manchow-soup.jpg", notes: "Printed menu selection",
       items: [
         { name: "Veg Hot and Sour Soup", price: 119, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Veg Sweet Corn Soup", price: 119, description: "From the printed restaurant menu.", diet: "veg" },
@@ -77,7 +77,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Non Veg. Soups", image: "/images/gallery-curry.jpg", notes: "Printed menu selection",
+      category: "Non Veg. Soups", image: "/images/menu/chicken-manchow-soup.jpg", notes: "Printed menu selection",
       items: [
         { name: "Chicken Sweet Corn Soup", price: 139, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Chicken Manchow Soup", price: 139, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -92,7 +92,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Veg. Starters", image: "/images/featured-starters.jpg", notes: "Printed menu selection",
+      category: "Veg. Starters", image: "/images/featured-veg.jpg", notes: "Printed menu selection",
       items: [
         { name: "Veg Gobili Chilli Dry and Wet", price: 239, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Gobi Manchurian Dry & Wet", price: 239, description: "From the printed restaurant menu.", diet: "veg" },
@@ -195,7 +195,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Veg. Fried Rice", image: "/images/featured-noodles.jpg", notes: "Printed menu selection",
+      category: "Veg. Fried Rice", image: "/images/gallery-rice.jpg", notes: "Printed menu selection",
       items: [
         { name: "Veg Jeera Rice", price: 170, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Veg Fried Rice", price: 170, description: "From the printed restaurant menu.", diet: "veg" },
@@ -207,7 +207,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Spl. Veg. Fried Rice", image: "/images/featured-noodles.jpg", notes: "Printed menu selection",
+      category: "Spl. Veg. Fried Rice", image: "/images/gallery-rice.jpg", notes: "Printed menu selection",
       items: [
         { name: "Spl. Panner Fried Rice", price: 260, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Spl. Mushroom Fried Rice", price: 260, description: "From the printed restaurant menu.", diet: "veg" },

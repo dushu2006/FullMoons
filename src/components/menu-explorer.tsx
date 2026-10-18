@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { ActionLink } from "@/components/action-link";
 import { buildWhatsAppHref, siteConfig } from "@/config/site";
+import { getCategoryImage } from "@/config/images";
 
 type MenuItem = {
   name: string;
@@ -144,7 +145,7 @@ export function MenuExplorer({ categories }: { categories: readonly MenuCategory
                 className="group flex w-full items-center gap-4 p-3 text-left transition hover:bg-[var(--color-bg-primary)] sm:p-4"
               >
                 <span className="relative h-16 w-20 shrink-0 overflow-hidden sm:h-20 sm:w-28">
-                  <Image src={category.image} alt="" fill sizes="112px" className="object-cover transition duration-300 group-hover:scale-105" />
+                  <Image src={getCategoryImage(category.category)} alt="" fill sizes="112px" className="object-cover transition duration-300 group-hover:scale-105" />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block font-heading text-xl font-semibold text-[var(--color-text-light-primary)] sm:text-2xl">{category.category}</span>
