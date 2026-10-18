@@ -51,26 +51,69 @@ an image only when it meaningfully supports that section").
 
 ## Generated photographs (this change)
 
-Ten photographs were generated to imitate authentic restaurant food
+Photographs were generated to imitate authentic restaurant food
 photography — natural ambient light, realistic textures and plating,
 ordinary Indian serving vessels (ceramic bowls, copper/steel handi,
-rustic wooden tables), restrained colour grading, no watermarks, text or
-studio backgrounds.
+rustic wooden tables), restrained colour grading, no watermarks, text
+or studio backgrounds. Prompts deliberately favour candid, handheld,
+slightly imperfect framing so the results read as real restaurant
+photos rather than polished renders.
+
+**Section imagery**
 
 | File | Subject | Used for |
 |---|---|---|
-| `sections/hero-meal.jpg` | Chicken biryani handi with raita, tandoori chicken, naan, salad | Homepage hero + gallery |
-| `sections/about-spread.jpg` | Vegetarian Indian spread (biryani, paneer, dal, curries, naan, roti) | About section + gallery |
+| `sections/hero-meal.jpg` | Chicken biryani handi with raita, tandoori chicken, naan, salad | Homepage hero + OG |
+| `sections/about-spread.jpg` | Vegetarian Indian spread, family-style | About section |
 | `sections/ambience.jpg` | Warm restaurant interior, wooden tables | Gallery |
-| `menu/veg-hot-sour-soup.jpg` | Vegetarian hot & sour soup | Veg Hot and Sour Soup |
-| `menu/veg-sweet-corn-soup.jpg` | Creamy sweet corn soup | Veg Sweet Corn Soup |
-| `menu/veg-manchow-soup.jpg` | Vegetarian manchow soup | Veg Manchow Soup |
-| `menu/veg-clear-soup.jpg` | Light clear vegetable soup | Veg Clear Soup (+ Garlic, Lemon Coriander) |
-| `menu/chicken-sweet-corn-soup.jpg` | Chicken sweet corn soup | Chicken Sweet Corn Soup (+ Clear, Lemon Coriander, Egg Drop) |
-| `menu/chicken-manchow-soup.jpg` | Chicken manchow soup | Chicken Manchow Soup (+ Dragon) |
-| `menu/chicken-hot-sour-soup.jpg` | Chicken hot & sour soup | Chicken Hot and Sour Soup (+ Mutton Hot & Sour, Mutton Pepper) |
 
-All **16 soup dishes** now have dedicated, correctly-matched photographs.
+**Soups (all 16 soup dishes covered)**
+
+| File | Subject |
+|---|---|
+| `menu/veg-hot-sour-soup.jpg` | Vegetarian hot & sour soup |
+| `menu/veg-sweet-corn-soup.jpg` | Creamy sweet corn soup |
+| `menu/veg-manchow-soup.jpg` | Vegetarian manchow soup |
+| `menu/veg-clear-soup.jpg` | Light clear vegetable soup |
+| `menu/chicken-sweet-corn-soup.jpg` | Chicken sweet corn soup |
+| `menu/chicken-manchow-soup.jpg` | Chicken manchow soup |
+| `menu/chicken-hot-sour-soup.jpg` | Chicken hot & sour soup |
+
+**Biryanis (the restaurant's signature — each ingredient distinct)**
+
+| File | Subject |
+|---|---|
+| `menu/veg-biryani.jpg` | Vegetable biryani |
+| `menu/paneer-biryani.jpg` | Paneer biryani |
+| `menu/mushroom-biryani.jpg` | Mushroom biryani |
+| `menu/kaju-biryani.jpg` | Kaju (cashew) biryani |
+| `menu/ulavacharu-veg-biryani.jpg` | Ulavacharu vegetable biryani |
+| `menu/chicken-biryani.jpg` | Chicken dum biryani |
+| `menu/mutton-biryani.jpg` | Mutton biryani |
+| `menu/fish-biryani.jpg` | Fish biryani |
+| `menu/prawns-biryani.jpg` | Prawns biryani |
+| `menu/egg-biryani.jpg` | Egg biryani |
+
+**Flagship curries, noodles, tandoori and breads**
+
+| File | Subject |
+|---|---|
+| `menu/paneer-butter-masala.jpg` | Paneer butter masala |
+| `menu/palak-paneer.jpg` | Palak paneer |
+| `menu/dal-tadka.jpg` | Dal tadka / dal fry |
+| `menu/chicken-curry.jpg` | Chicken curry |
+| `menu/prawns-curry.jpg` | Prawns curry |
+| `menu/veg-noodles.jpg` | Vegetable noodles |
+| `menu/chicken-noodles.jpg` | Chicken noodles |
+| `menu/tandoori-chicken.jpg` | Tandoori chicken |
+| `menu/roti.jpg` | Tandoori roti / kothimeera roti |
+| `menu/butter-naan.jpg` | Butter / plain / garlic naan |
+
+That is **27 dedicated photographs**, covering the section imagery,
+every soup, every biryani ingredient, and the flagship curries,
+noodles, tandoori and breads. The homepage gallery was rebalanced to
+showcase this variety (biryani, paneer, tandoori, noodles, curry,
+seafood, ambience) instead of repeating soup shots.
 
 ## Dietary safety
 
@@ -85,7 +128,7 @@ All **16 soup dishes** now have dedicated, correctly-matched photographs.
 
 ## Pending — dishes still on a shared category photograph
 
-168 dishes currently resolve to the closest correct, dietary-safe
+139 dishes currently resolve to the closest correct, dietary-safe
 **category** photograph (e.g. biryanis → the biryani photo, curries →
 the curry photo, breads → the bread photo). This is honest and
 correct, but the brief asks for a dedicated photograph per dish where
