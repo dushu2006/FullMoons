@@ -1,6 +1,6 @@
 # Full Moons — Image Integration Report
 
-Date: 2026-10-18 · Branch: `feat/food-photography-image-system`
+Date: 2026-10-18 · Branch: `arena/682444af-fullmoons` (pull request branch)
 
 ## 1. Audit findings (before this change)
 
@@ -52,7 +52,7 @@ dietary tags were left untouched throughout this work.
   animation, category selection, pause behaviour, prices and responsive layout
   are unchanged.
 
-## 3. Photographs generated (20 so far, in batches of 10)
+## 3. Photographs generated (29 so far, in batches of 10)
 
 | File | Subject |
 |---|---|
@@ -75,16 +75,25 @@ dietary tags were left untouched throughout this work.
 | `public/images/menu/chicken-65.jpg` | Chicken 65 |
 | `public/images/menu/prawns-65.jpg` | Prawns 65 |
 | `public/images/menu/mutton-curry.jpg` | Mutton curry |
-| `public/images/menu/spl-mix-biryani.jpg` | Special mix biryani |
+| `public/images/menu/chicken-manchow-soup.jpg` | Chicken manchow soup |
+| `public/images/menu/chicken-sweet-corn-soup.jpg` | Chicken sweet corn soup |
+| `public/images/menu/chicken-hot-and-sour-soup.jpg` | Chicken hot and sour soup |
+| `public/images/menu/chicken-clear-soup.jpg` | Clear chicken soup |
+| `public/images/menu/egg-drop-soup.jpg` | Egg drop soup |
+| `public/images/menu/chicken-dragon-soup.jpg` | Chicken dragon soup |
+| `public/images/menu/mutton-hot-and-sour-soup.jpg` | Mutton hot and sour soup |
+| `public/images/menu/mutton-pepper-soup.jpg` | Mutton pepper soup |
+| `public/images/menu/mutton-manchow-soup.jpg` | Mutton manchow soup |
+| `public/images/menu/chicken-manchurian.jpg` | Chicken manchurian |
 
-All five veg-soup dishes now show their own dedicated photographs. The
-gallery is fully live with seven distinct photographs, and 21 of 22
+Every soup on the menu now has its own dedicated photograph, and the
+gallery is fully live with seven distinct photographs. Twelve of 22
 category thumbnails use their dedicated representative dish photo.
 
-## 4. Remaining limitation — 77 photographs pending
+## 4. Remaining limitation — 68 photographs pending
 
 **The image-generation tool allows 10 photographs per user turn.** The
-remaining 77 photographs (listed dish-by-dish with ⏳ in
+remaining 68 photographs (listed dish-by-dish with ⏳ in
 `docs/IMAGE-MANIFEST.md`) are generated in batches of 10; after each
 batch, `npm run sync:images` and `npm run docs:images` activate the new
 photographs on the site with no code changes. Web image search was
