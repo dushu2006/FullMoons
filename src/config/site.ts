@@ -1,3 +1,9 @@
+import {
+  availableCategoryImageMap as categoryImageMap,
+  availableHeroImage as heroImage,
+  availableIntroImage as introImage,
+} from "./menu-image-availability";
+
 export const siteConfig = {
   business: {
     name: "FULL MOONs Family Restaurant",
@@ -47,26 +53,20 @@ export const siteConfig = {
     title: "Discover Your Next Favourite Dish.",
     description:
       "Explore a selection of biryanis, Indian favourites and more at FULL MOONs Family Restaurant.",
-    image: {
-      src: "/images/hero-biryani.jpg",
-      alt: "Illustrative biryani dish served in a traditional vessel",
-    },
+    image: heroImage,
   },
   intro: {
     eyebrow: "About FULL MOONs",
     title: "Food-first dining with familiar favourites",
     description:
       "FULL MOONs Family Restaurant is publicly listed in New Gajuwaka, Visakhapatnam, with menu categories that include biryanis, chicken and mutton dishes, seafood, vegetarian options, starters, curries, rice, noodles, soups and Indian breads.",
-    image: {
-      src: "/images/intro-platter.jpg",
-      alt: "Illustrative assortment of Indian dishes arranged on a table",
-    },
+    image: introImage,
   },
   // Transcribed from the restaurant's printed menu screenshots supplied for this update.
   // Prices are shown in INR and should be kept aligned with the physical menu.
   menuOverview: [
     {
-      category: "Veg. Soups", image: "/images/featured-veg.jpg", notes: "Printed menu selection",
+      category: "Veg. Soups", image: "/images/menu/veg-hot-and-sour-soup.jpg", notes: "Printed menu selection",
       items: [
         { name: "Veg Hot and Sour Soup", price: 119, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Veg Sweet Corn Soup", price: 119, description: "From the printed restaurant menu.", diet: "veg" },
@@ -77,7 +77,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Non Veg. Soups", image: "/images/gallery-curry.jpg", notes: "Printed menu selection",
+      category: "Non Veg. Soups", image: "/images/menu/chicken-manchow-soup.jpg", notes: "Printed menu selection",
       items: [
         { name: "Chicken Sweet Corn Soup", price: 139, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Chicken Manchow Soup", price: 139, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -92,7 +92,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Veg. Starters", image: "/images/featured-starters.jpg", notes: "Printed menu selection",
+      category: "Veg. Starters", image: "/images/menu/gobi-manchurian.jpg", notes: "Printed menu selection",
       items: [
         { name: "Veg Gobili Chilli Dry and Wet", price: 239, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Gobi Manchurian Dry & Wet", price: 239, description: "From the printed restaurant menu.", diet: "veg" },
@@ -109,7 +109,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Spl. Veg. Starters", image: "/images/featured-veg.jpg", notes: "Printed menu selection",
+      category: "Spl. Veg. Starters", image: "/images/menu/spl-veg-dry.jpg", notes: "Printed menu selection",
       items: [
         { name: "Spl. Veg Dry", price: 280, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Shahi Veg Dry", price: 280, description: "From the printed restaurant menu.", diet: "veg" },
@@ -118,7 +118,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Non Veg. Starters", image: "/images/featured-starters.jpg", notes: "Printed menu selection",
+      category: "Non Veg. Starters", image: "/images/menu/chicken-65.jpg", notes: "Printed menu selection",
       items: [
         { name: "Chicken Manchurian", price: 260, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Chilli Chicken", price: 260, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -143,7 +143,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Sea Food (Bone Less)", image: "/images/featured-seafood.jpg", notes: "Printed menu selection",
+      category: "Sea Food (Bone Less)", image: "/images/menu/prawns-65.jpg", notes: "Printed menu selection",
       items: [
         { name: "Fish 65", price: 300, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Apollo Fish", price: 300, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -158,7 +158,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Spl. Nonveg Starters", image: "/images/featured-starters.jpg", notes: "Printed menu selection",
+      category: "Spl. Nonveg Starters", image: "/images/menu/dragon-mutton.jpg", notes: "Printed menu selection",
       items: [
         { name: "Chicken 77", price: 370, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Korean Chilli Wings", price: 370, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -173,7 +173,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Mutton Starters", image: "/images/intro-platter.jpg", notes: "Printed menu selection",
+      category: "Mutton Starters", image: "/images/menu/mutton-fry.jpg", notes: "Printed menu selection",
       items: [
         { name: "Mutton Fry", price: 390, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Mutton 65", price: 390, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -183,7 +183,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Tandoori Non Veg. Starters", image: "/images/featured-starters.jpg", notes: "Bone less options shown in the printed menu.",
+      category: "Tandoori Non Veg. Starters", image: "/images/menu/tandoori-chicken.jpg", notes: "Bone less options shown in the printed menu.",
       items: [
         { name: "Tandoori Chicken (Full)", price: 540, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Tandoori Chicken (Half)", price: 315, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -195,7 +195,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Veg. Fried Rice", image: "/images/featured-noodles.jpg", notes: "Printed menu selection",
+      category: "Veg. Fried Rice", image: "/images/menu/veg-fried-rice.jpg", notes: "Printed menu selection",
       items: [
         { name: "Veg Jeera Rice", price: 170, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Veg Fried Rice", price: 170, description: "From the printed restaurant menu.", diet: "veg" },
@@ -207,7 +207,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Spl. Veg. Fried Rice", image: "/images/featured-noodles.jpg", notes: "Printed menu selection",
+      category: "Spl. Veg. Fried Rice", image: "/images/menu/shezwan-fried-rice.jpg", notes: "Printed menu selection",
       items: [
         { name: "Spl. Panner Fried Rice", price: 260, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Spl. Mushroom Fried Rice", price: 260, description: "From the printed restaurant menu.", diet: "veg" },
@@ -216,7 +216,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Non Veg. Fried Rice", image: "/images/gallery-rice.jpg", notes: "Printed menu selection",
+      category: "Non Veg. Fried Rice", image: "/images/menu/chicken-fried-rice.jpg", notes: "Printed menu selection",
       items: [
         { name: "Egg Fried Rice", price: 180, description: "From the printed restaurant menu.", diet: "egg" },
         { name: "Chicken Fried Rice", price: 200, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -226,7 +226,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Veg. Noodles", image: "/images/featured-noodles.jpg", notes: "Printed menu selection",
+      category: "Veg. Noodles", image: "/images/menu/veg-noodles.jpg", notes: "Printed menu selection",
       items: [
         { name: "Veg Noodles", price: 170, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Egg Noodles", price: 190, description: "From the printed restaurant menu.", diet: "egg" },
@@ -234,7 +234,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Veg. Curries", image: "/images/gallery-curry.jpg", notes: "Printed menu selection",
+      category: "Veg. Curries", image: "/images/menu/paneer-butter-masala.jpg", notes: "Printed menu selection",
       items: [
         { name: "Mix Veg Curry", price: 200, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Veg Khola Puri", price: 220, description: "From the printed restaurant menu.", diet: "veg" },
@@ -252,7 +252,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Non Veg. Curries", image: "/images/gallery-curry.jpg", notes: "Printed menu selection",
+      category: "Non Veg. Curries", image: "/images/menu/butter-chicken.jpg", notes: "Printed menu selection",
       items: [
         { name: "Chicken Curry", price: 270, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Andhra Chicken Curry", price: 290, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -271,7 +271,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Sea Food Curry", image: "/images/featured-seafood.jpg", notes: "Printed menu selection",
+      category: "Sea Food Curry", image: "/images/menu/prawns-curry.jpg", notes: "Printed menu selection",
       items: [
         { name: "Prawns Curry", price: 290, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Prawns Masala Curry", price: 300, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -280,7 +280,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Veg. Biryani's", image: "/images/hero-biryani.jpg", notes: "Printed menu selection",
+      category: "Veg. Biryani's", image: "/images/menu/veg-biryani.jpg", notes: "Printed menu selection",
       items: [
         { name: "Kaju Biryani", price: 220, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Veg Biryani", price: 200, description: "From the printed restaurant menu.", diet: "veg" },
@@ -290,7 +290,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Non Veg. Biryani's", image: "/images/hero-biryani.jpg", notes: "Printed menu selection",
+      category: "Non Veg. Biryani's", image: "/images/menu/chicken-dum-biryani.jpg", notes: "Printed menu selection",
       items: [
         { name: "Dum Biryani", price: 240, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Chicken Fry Pieces Biryani (Mini)", price: 170, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -302,7 +302,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Spl. Biryani's", image: "/images/hero-biryani.jpg", notes: "Printed menu selection",
+      category: "Spl. Biryani's", image: "/images/menu/full-moon-biryani.jpg", notes: "Printed menu selection",
       items: [
         { name: "Full Moon Biryani (Spl)", price: 499, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Chicken Lollypop Biryani (4Pcs)", price: 370, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -322,7 +322,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Mutton Curry", image: "/images/intro-platter.jpg", notes: "Printed menu selection",
+      category: "Mutton Curry", image: "/images/menu/mutton-curry.jpg", notes: "Printed menu selection",
       items: [
         { name: "Kadai Mutton Curry", price: 390, description: "From the printed restaurant menu.", diet: "non-veg" },
         { name: "Gongura Mutton Curry", price: 390, description: "From the printed restaurant menu.", diet: "non-veg" },
@@ -334,7 +334,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Roti", image: "/images/gallery-bread.jpg", notes: "Printed menu selection",
+      category: "Roti", image: "/images/menu/tandoori-roti.jpg", notes: "Printed menu selection",
       items: [
         { name: "Tandoori Roti (Plain)", price: 35, description: "From the printed restaurant menu.", diet: "veg" },
         { name: "Tandoori Roti (Butter)", price: 40, description: "From the printed restaurant menu.", diet: "veg" },
@@ -349,7 +349,7 @@ export const siteConfig = {
       ],
     },
     {
-      category: "Special Biryani Offers", image: "/images/hero-biryani.jpg", notes: "Combination packs transcribed from the printed menu; descriptions preserve listed contents.",
+      category: "Special Biryani Offers", image: "/images/menu/spl-mix-biryani.jpg", notes: "Combination packs transcribed from the printed menu; descriptions preserve listed contents.",
       items: [
         { name: "Family Pack — Dum Biryani (4 Dum Pie + Chicken 65, 3 Eggs, Soft Drink)", price: 649, description: "Combination offer; see included items in the name.", diet: "non-veg" },
         { name: "Family Pack — Fry Biryani (Fry Pie + Chicken 65, 3 Eggs, Soft Drink)", price: 749, description: "Combination offer; see included items in the name.", diet: "non-veg" },

@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     description:
       "Family restaurant in New Gajuwaka, Visakhapatnam. Browse menu categories, contact details and directions.",
     type: "website",
-    images: [
-      {
-        url: "/images/hero-biryani.jpg",
-        width: 1200,
-        height: 900,
-        alt: "Illustrative biryani hero image",
-      },
-    ],
+      images: [
+        {
+          url: "/images/hero-biryani.jpg",
+          width: 1200,
+          height: 900,
+          alt: "Chicken dum biryani served in a copper handi",
+        },
+      ],
   },
   twitter: {
     card: "summary_large_image",
